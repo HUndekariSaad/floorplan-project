@@ -1,22 +1,18 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './website/views/home/home.component';
 import { ServicesComponent } from './website/views/services/services.component';
-import { MainComponent } from './website/views/main/main.component';
+import { ContactUsComponent } from './website/views/contact-us/contact-us.component';
+import { AboutUsComponent } from './website/views/about-us/about-us.component';
 export const routes: Routes = [
 
 
   
 
-// { path: '', component: HomeComponent },
+{ path: '', component: HomeComponent },
+{ path: 'about', component: AboutUsComponent },
 { path: 'service', component: ServicesComponent },
+{ path: 'contact', component: ContactUsComponent },
 
-  {
-    path: '',
-    loadComponent: () => import('./website/views/main/main.component').then(m => m.MainComponent),
-    data: {
-      title: 'main'
-    }
-  },
   // {
   //   path: '',
   //   redirectTo: 'dashboard',
