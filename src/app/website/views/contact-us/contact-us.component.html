@@ -1,1 +1,85 @@
-<p>contact-us works!</p>
+<section class="py-5 contact-section bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-danger">Contact Us</h2>
+      <p class="text-muted">
+        Whether you need durable industrial epoxy, anti-skid PU flooring, or a polished concrete finish — our team is here to help.
+      </p>
+    </div>
+
+    <div class="row g-4 shadow p-4 bg-white rounded">
+      <!-- Left Contact Info -->
+      <div class="col-md-5 bg-dark text-white p-4 rounded">
+        <h5>Contact Information</h5>
+        <p>Say something to start a live chat!</p>
+        <ul class="list-unstyled mt-4">
+          <li class="mb-2"><i class="bi bi-telephone-fill me-2"></i> +91 9321375933</li>
+          <!-- <li class="mb-2"><i class="bi bi-envelope-fill me-2"></i> skbleure@floortech.co.in</li> -->
+          <li><i class="bi bi-geo-alt-fill me-2"></i>02, Shankar Mangal Dhadi, Shankar Lane, Orlem Tank Road, Malad (W), Mumbai – 400064</li>
+        </ul>
+        <div class="mt-4 d-flex gap-3">
+          <a href="#"><i class="bi bi-facebook fs-5 text-white"></i></a>
+          <a href="#"><i class="bi bi-instagram fs-5 text-white"></i></a>
+        </div>
+      </div>
+
+      <!-- Right Contact Form -->
+      <div class="col-md-7">
+        <form >
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input formControlName="firstName" type="text" class="form-control" placeholder="First Name" />
+            </div>
+            <div class="col-md-6">
+              <input formControlName="lastName" type="text" class="form-control" placeholder="Last Name" />
+            </div>
+            <div class="col-md-6">
+              <input formControlName="email" type="email" class="form-control" placeholder="Email" />
+            </div>
+            <div class="col-md-6">
+              <input formControlName="phone" type="tel" class="form-control" placeholder="Phone Number" />
+            </div>
+
+            <div class="col-12">
+              <label class="form-label fw-bold">Select Service</label>
+              <div class="row row-cols-2 row-cols-md-3 g-2">
+                <div class="form-check col">
+                  <input class="form-check-input" type="radio" formControlName="service" value="Epoxy Flooring" id="epoxy" />
+                  <label class="form-check-label" for="epoxy">Epoxy Flooring</label>
+                </div>
+                <div class="form-check col">
+                  <input class="form-check-input" type="radio" formControlName="service" value="PU Coating" id="coating" />
+                  <label class="form-check-label" for="coating">PU Coating</label>
+                </div>
+                <div class="form-check col">
+                  <input class="form-check-input" type="radio" formControlName="service" value="Self-leveling Screed" id="screed" />
+                  <label class="form-check-label" for="screed">Self-leveling Screed</label>
+                </div>
+                <div class="form-check col">
+                  <input class="form-check-input" type="radio" formControlName="service" value="Tile Protection" id="tiles" />
+                  <label class="form-check-label" for="tiles">Tile Protection</label>
+                </div>
+                <div class="form-check col">
+                  <input class="form-check-input" type="radio" formControlName="service" value="All Wall Coatings" id="coatings" />
+                  <label class="form-check-label" for="coatings">All Wall Coatings</label>
+                </div>
+                <div class="form-check col">
+                  <input class="form-check-input" type="radio" formControlName="service" value="Under Water Coating" id="waterproof" />
+                  <label class="form-check-label" for="waterproof">Under Water Coating</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <textarea formControlName="message" class="form-control" rows="4" placeholder="Write a message..."></textarea>
+            </div>
+
+            <div class="col-12 text-end">
+              <button type="submit" class="btn btn-outline-danger">Send Message →</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
