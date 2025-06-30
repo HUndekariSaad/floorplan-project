@@ -32,3 +32,11 @@
 //  --scrollbar-thumb-transition: height ease-out 150ms, width ease-out 150ms;
 //  --scrollbar-track-transition: height ease-out 150ms, width ease-out 150ms;
 //}
+
+
+.logo-img {
+  width: 216px;
+  height: 43px;
+  border-radius: 3px;
+  // object-fit: cover; /* Optional: ensures clean cropping */
+}

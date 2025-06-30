@@ -15,9 +15,9 @@ import { HeaderComponent } from './website/layout/header/header.component';
     selector: 'app-root',
    standalone: true,
   template: `
-    <app-header></app-header>
+    <!-- <app-header></app-header> -->
     <router-outlet></router-outlet>
-    <app-footer></app-footer>
+    <!-- <app-footer></app-footer> -->
   `,
   imports: [RouterOutlet, HeaderComponent, FooterComponent],
 })
