@@ -12,7 +12,9 @@ import { IconDirective } from '@coreui/icons-angular';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+
 constructor(private renderer: Renderer2,public colorModeService: ColorModeService) {}
+
   setDarkMode() {
     this.renderer.removeClass(document.body, 'light-mode');
     this.renderer.addClass(document.body, 'dark-mode');
