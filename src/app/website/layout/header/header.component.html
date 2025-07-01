@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-white shadow-sm py-2">
+<nav class="navbar navbar-expand-lg  shadow-sm py-2">
     <div class="container">
         <!-- Logo -->
         <a class="navbar-brand d-flex align-items-center gap-2" routerLink="/">
@@ -6,7 +6,6 @@
             <img src="assets/images/Logo.jpeg" alt="lds;fdsf" height="40" />
             <span class="fw-bold text-uppercase small">Floortech Industries Pvt. Ltd.</span>
         </a>
-
         <!-- Mobile Toggle Button -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -27,12 +26,9 @@
                     <a class="nav-link" routerLink="/service" routerLinkActive="active">Services</a>
                 </li>
             </ul>
-
-
             <!-- dark-mode-toggle.component.html -->
             <div class="d-flex align-items-center gap-2">
                 <!-- <button class="btn btn-outline-primary btn-sm rounded-circle" (click)="setLightMode()">
-=======
               <div class="d-flex align-items-center gap-2">
                 <button class="btn btn-outline-primary btn-sm rounded-circle" (click)="setLightMode()">
                     <i class="bi bi-brightness-high"></i>
@@ -40,19 +36,19 @@
                 <button class="btn btn-outline-dark btn-sm rounded-circle" (click)="setDarkMode()">
                     <i class="bi bi-moon"></i>
                 </button> -->
-                  <c-header-nav class="ms-auto ms-md-0">
-      <div class="nav-item py-1">
-        <div class="vr h-100 mx-2 text-body text-opacity-75"></div>
-      </div>
-      <ng-container *ngTemplateOutlet="themeDropdown" />
-      <div class="nav-item py-1">
-        <div class="vr h-100 mx-2 text-body text-opacity-75"></div>
-      </div>
-    </c-header-nav>
+                <c-header-nav class="ms-auto ms-md-0">
+                    <div class="nav-item py-1">
+                        <div class="vr h-100 mx-2 text-body text-opacity-75"></div>
+                    </div>
+                    <ng-container *ngTemplateOutlet="themeDropdown" />
+                    <div class="nav-item py-1">
+                        <div class="vr h-100 mx-2 text-body text-opacity-75"></div>
+                    </div>
+                </c-header-nav>
 
-    <c-header-nav class="mx-0">
-      <!-- <ng-container *ngTemplateOutlet="userDropdown" /> -->
-    </c-header-nav>
+                <c-header-nav class="mx-0">
+                    <!-- <ng-container *ngTemplateOutlet="userDropdown" /> -->
+                </c-header-nav>
                 <ng-template #themeDropdown>
                     <c-dropdown alignment="end" variant="nav-item">
                         <button [caret]="false" cDropdownToggle aria-label="Open theme picker">
