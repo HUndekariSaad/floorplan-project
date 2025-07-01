@@ -1,17 +1,27 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './website/views/home/home.component';
+import { WebsiteLayoutComponent } from './website/layout/website-layout/website-layout.component';
 import { ServicesComponent } from './website/views/services/services.component';
 import { ContactUsComponent } from './website/views/contact-us/contact-us.component';
 import { AboutUsComponent } from './website/views/about-us/about-us.component';
 export const routes: Routes = [
 
-
+{
+    path: '',
+    component: WebsiteLayoutComponent,
+    children: [
+      { path: '', component: HomeComponent },
+      { path: 'about', component: AboutUsComponent },
+      { path: 'service', component: ServicesComponent },
+      { path: 'contact', component: ContactUsComponent },
+    ]
+  },
   
 
-{ path: '', component: HomeComponent },
-{ path: 'about', component: AboutUsComponent },
-{ path: 'service', component: ServicesComponent },
-{ path: 'contact', component: ContactUsComponent },
+// { path: '', component: HomeComponent },
+// { path: 'about', component: AboutUsComponent },
+// { path: 'service', component: ServicesComponent },
+// { path: 'contact', component: ContactUsComponent },
 
   // {
   //   path: '',

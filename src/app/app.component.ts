@@ -7,8 +7,6 @@ import { delay, filter, map, tap } from 'rxjs/operators';
 import { ColorModeService } from '@coreui/angular';
 import { IconSetService } from '@coreui/icons-angular';
 import { iconSubset } from './icons/icon-subset';
-import { FooterComponent } from './website/layout/footer/footer.component';
-import { HeaderComponent } from './website/layout/header/header.component';
 
 
 @Component({
@@ -19,7 +17,7 @@ import { HeaderComponent } from './website/layout/header/header.component';
     <router-outlet></router-outlet>
     <!-- <app-footer></app-footer> -->
   `,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent],
+  imports: [RouterOutlet],
 })
 export class AppComponent implements OnInit {
   title = 'CoreUI Angular Admin Template';
