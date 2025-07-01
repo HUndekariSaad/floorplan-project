@@ -16,18 +16,12 @@ export const routes: Routes = [
       { path: 'contact', component: ContactUsComponent },
     ]
   },
-  
 
-// { path: '', component: HomeComponent },
-// { path: 'about', component: AboutUsComponent },
-// { path: 'service', component: ServicesComponent },
-// { path: 'contact', component: ContactUsComponent },
-
-  // {
-  //   path: '',
-  //   redirectTo: 'dashboard',
-  //   pathMatch: 'full'
-  // },
+  {
+    path: '',
+    redirectTo: '',
+    pathMatch: 'full'
+  },
   {
     path: '',
     loadComponent: () => import('./layout').then(m => m.DefaultLayoutComponent),
