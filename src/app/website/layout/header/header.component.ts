@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-constructor(private renderer: Renderer2) {}
+ constructor(private renderer: Renderer2) {}
   setDarkMode() {
     this.renderer.removeClass(document.body, 'light-mode');
     this.renderer.addClass(document.body, 'dark-mode');
