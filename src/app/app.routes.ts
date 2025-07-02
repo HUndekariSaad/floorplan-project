@@ -1,9 +1,10 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './website/views/home/home.component';
 import { WebsiteLayoutComponent } from './website/layout/website-layout/website-layout.component';
-import { ServicesComponent } from './website/views/services/services.component';
 import { ContactUsComponent } from './website/views/contact-us/contact-us.component';
 import { AboutUsComponent } from './website/views/about-us/about-us.component';
+import { MainServicesComponent } from './website/views/main-services/main-services.component';
+import { ServicesComponent } from './website/views/main-services/services/services.component';
 export const routes: Routes = [
 
 {
@@ -12,6 +13,7 @@ export const routes: Routes = [
     children: [
       { path: '', component: HomeComponent },
       { path: 'about', component: AboutUsComponent },
+      { path: 'services', component: MainServicesComponent },
       { path: 'service', component: ServicesComponent },
       { path: 'contact', component: ContactUsComponent },
     ]
