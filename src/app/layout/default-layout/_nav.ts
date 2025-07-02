@@ -29,82 +29,85 @@ export const navItems: INavData[] = [
   //   name: 'Components',
   //   title: true
   // },
-    {
-    name: 'Common Forms',
-    url: '/base',
-    iconComponent: { name: 'cil-puzzle' },
-    children: [
-      {
-        name: 'Role Master',
-        url: '/base/accordion',
-        icon: 'nav-icon-bullet'
-      },
-      {
-        name: 'User Master',
-        url: '/base/breadcrumbs',
-        icon: 'nav-icon-bullet'
-      },
-      {
-        name: 'Forms Master',
-        url: '/base/cards',
-        icon: 'nav-icon-bullet'
-      },
+  //   {
+  //   name: 'Common Forms',
+  //   url: '/base',
+  //   iconComponent: { name: 'cil-puzzle' },
+  //   children: [
+  //     {
+  //       name: 'Role Master',
+  //       url: '/base/accordion',
+  //       icon: 'nav-icon-bullet'
+  //     },
+  //     {
+  //       name: 'User Master',
+  //       url: '/base/breadcrumbs',
+  //       icon: 'nav-icon-bullet'
+  //     },
+  //     {
+  //       name: 'Forms Master',
+  //       url: '/base/cards',
+  //       icon: 'nav-icon-bullet'
+  //     },
       
-    ]
-  },
-  {
-    name: 'Master',
-    url: '/base',
+  //   ]
+  // },
+   { name: 'Master',
+    url: '/Master',
     iconComponent: { name: 'cil-puzzle' },
     children: [
-      {
-        name: 'Services Master',
-        url: '/base/accordion',
-        icon: 'nav-icon-bullet'
-      },
-      {
-        name: 'Indian Clients Master',
-        url: '/base/breadcrumbs',
-        icon: 'nav-icon-bullet'
-      },
-      {
-        name: 'International Clients Master',
-        url: '/base/cards',
-        icon: 'nav-icon-bullet'
-      },
-      {
-        name: 'Capacity Master',
-        url: '/base/carousel',
-        icon: 'nav-icon-bullet'
-      },
-      {
-        name: 'About Floor tech Master',
-        url: '/base/collapse',
-        icon: 'nav-icon-bullet'
-      },
-      {
-        name: 'Contact Information Master',
-        url: '/base/list-group',
-        icon: 'nav-icon-bullet'
-      },
-      {
-        name: 'Team Master',
-        url: '/base/navs',
-        icon: 'nav-icon-bullet'
-      },
-      {
-        name: 'Work Gallery Master',
-        url: '/base/pagination',
-        icon: 'nav-icon-bullet'
-      },
-      {
-        name: 'Clients Feedback Master',
-        url: '/base/placeholder',
-        icon: 'nav-icon-bullet'
-      },
   
+       {
+        name: 'Home Master',
+        url: '/Master/home',
+        icon: 'nav-icon-bullet'
+      },
+      {
+        name: 'About Us Master',
+        url: '/Master/aboutus',
+        icon: 'nav-icon-bullet'
+      },
+      {
+        name: 'Contact Us Master',
+        url: '/Master/contactus',
+        icon: 'nav-icon-bullet'
+      },
+        {
+        name: 'Services Master',
+        url: '/Master/service',
+        icon: 'nav-icon-bullet'
+      },
+
+      {
+        name: 'Clienet Testimonial Master',
+        url: '/Master/client',
+        icon: 'nav-icon-bullet'
+      },
     ]
-  },
+  }
+      // {
+      //   name: 'Contact Information Master',
+      //   url: '/base/list-group',
+      //   icon: 'nav-icon-bullet'
+      // },
+      // {
+      //   name: 'Team Master',
+      //   url: '/base/navs',
+      //   icon: 'nav-icon-bullet'
+      // },
+      // {
+      //   name: 'Work Gallery Master',
+      //   url: '/base/pagination',
+      //   icon: 'nav-icon-bullet'
+      // },
+      // {
+      //   name: 'Clients Feedback Master',
+      //   url: '/base/placeholder',
+      //   icon: 'nav-icon-bullet'
+      // },
+  
+    
+
   // {
   //   name: 'Buttons',
   //   url: '/buttons',
@@ -205,7 +208,7 @@ export const navItems: INavData[] = [
   //     }
   //   ]
   // },
-  {
+  ,{
     name: 'Notifications',
     url: '/notifications',
     iconComponent: { name: 'cil-bell' },

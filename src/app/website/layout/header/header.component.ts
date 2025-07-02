@@ -40,4 +40,6 @@ constructor(private renderer: Renderer2,public colorModeService: ColorModeServic
     const currentMode = this.colorMode();
     return this.colorModes.find(mode => mode.name === currentMode)?.icon ?? 'cilSun';
   });
+
+  
 }

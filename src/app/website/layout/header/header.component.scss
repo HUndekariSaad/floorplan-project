@@ -1,17 +1,15 @@
 .nav-link {
   cursor: pointer;
 }
-/* styles.css */
-
 body.dark-mode {
   background-color: #121212;
-  color: #ffffff;
+  color: white;
+}
+body.light-mode {
+  background-color: white;
+  color: black;
 }
 
-body.light-mode {
-  background-color: #ffffff;
-  color: #000000;
-}
 
 /* You can customize more like navbar, buttons etc. */
 .navbar.dark-mode {
