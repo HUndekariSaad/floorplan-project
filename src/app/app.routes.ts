@@ -5,6 +5,8 @@ import { ContactUsComponent } from './website/views/contact-us/contact-us.compon
 import { AboutUsComponent } from './website/views/about-us/about-us.component';
 import { MainServicesComponent } from './website/views/main-services/main-services.component';
 import { ServicesComponent } from './website/views/main-services/services/services.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 export const routes: Routes = [
 
 {
@@ -24,6 +26,10 @@ export const routes: Routes = [
     redirectTo: '',
     pathMatch: 'full'
   },
+
+  
+   { path: 'login', component: LoginComponent },
+   { path: 'register', component: RegisterComponent },
   {
     path: '',
     loadComponent: () => import('./layout').then(m => m.DefaultLayoutComponent),
