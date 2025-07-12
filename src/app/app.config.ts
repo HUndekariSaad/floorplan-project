@@ -12,11 +12,15 @@ import {
 import { DropdownModule, SidebarModule } from '@coreui/angular';
 import { IconSetService } from '@coreui/icons-angular';
 import { routes } from './app.routes';
-import { HttpClientModule } from '@angular/common/http';
+import {
+  provideHttpClient,
+  withInterceptorsFromDi
+} from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(routes,
+    provideRouter(
+      routes,
       withRouterConfig({
         onSameUrlNavigation: 'reload'
       }),
@@ -28,7 +32,8 @@ export const appConfig: ApplicationConfig = {
       withViewTransitions(),
       withHashLocation()
     ),
-    importProvidersFrom(SidebarModule, DropdownModule, HttpClientModule),
+    importProvidersFrom(SidebarModule, DropdownModule),
+    provideHttpClient(withInterceptorsFromDi()), // ✅ Correctly setup for DI-based interceptors
     IconSetService,
     provideAnimationsAsync()
   ]
