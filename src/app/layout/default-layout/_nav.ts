@@ -83,6 +83,11 @@ export const navItems: INavData[] = [
         url: '/Master/client',
         icon: 'nav-icon-bullet'
       },
+        {
+        name: 'Indian Client Master',
+        url: '/Master/IndianClient',
+        icon: 'nav-icon-bullet'
+      },
     ]
   }
       // {

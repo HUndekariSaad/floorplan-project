@@ -38,6 +38,10 @@ readonly renderer = inject(Renderer2);
     this.setDarkMode();
   }
 }
+logout(): void {
+   sessionStorage.removeItem('auth_token');
+    this.router.navigate(['/login']);
+}
 
   setDarkMode() {
     this.renderer.removeClass(document.body, 'light-mode');
