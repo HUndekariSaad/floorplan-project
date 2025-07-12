@@ -7,6 +7,7 @@ import { MainServicesComponent } from './website/views/main-services/main-servic
 import { ServicesComponent } from './website/views/main-services/services/services.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { AuthGuard } from './auth/auth.guard';
 export const routes: Routes = [
 
 {
@@ -33,6 +34,7 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () => import('./layout').then(m => m.DefaultLayoutComponent),
+     canActivate: [AuthGuard],
     data: {
       title: 'Home'
     },
