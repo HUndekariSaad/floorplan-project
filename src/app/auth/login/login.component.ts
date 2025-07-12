@@ -44,7 +44,7 @@ export class LoginComponent {
 
       // ✅ Optionally store token
       if (res.token) {
-        localStorage.setItem('auth_token', res.token);
+        localStorage.setItem('auth_token', res.token.result);
       }
 
       this.loginForm.reset();
