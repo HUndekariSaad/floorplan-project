@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AboutusDrawerComponent } from '../aboutus-drawer/aboutus-drawer.component';
+import { ApiService } from '../../../../services/api.service';
 
 @Component({
   selector: 'app-aboutus-master',
@@ -8,12 +9,24 @@ import { AboutusDrawerComponent } from '../aboutus-drawer/aboutus-drawer.compone
   styleUrl: './aboutus-master.component.scss'
 })
 export class AboutusMasterComponent {
-formTitle = "About Us Master"
+  formTitle = "About Us Master"
+  AboutList: any = [];
+  apiKey: string = 'api/AboutUs';
   homeList = [
     { description: 'Welcome to Our Website', imageUrl: 'https://via.placeholder.com/100' },
     { description: 'Explore Our Services', imageUrl: '' }
   ];
+  constructor(private api: ApiService) {
 
+  }
+  ngOnInit() {
+    this.getData();
+  }
+  getData() {
+    this.api.getDataApi(this.apiKey).subscribe((res: any) => {
+      this.AboutList = res;
+    })
+  }
   edit(item: any): void {
     alert('Edit clicked: ' + item.description);
   }
@@ -24,20 +37,20 @@ formTitle = "About Us Master"
       this.homeList.splice(index, 1);
     }
   }
-   drawerTitle = "Add New picture";
+  drawerTitle = "Add New picture";
   // drawerData: CustmoerCategoryData = new CustmoerCategoryData();
   drawervisible = false;
-  add(){
-     this.drawerTitle = "Add new Picture";
+  add() {
+    this.drawerTitle = "Add new Picture";
     // this.drawerData = new CustmoerCategoryData();
     this.drawervisible = true;
   }
   drawerClose(): void {
-  this.drawervisible = false;
-}
+    this.drawervisible = false;
+  }
 
   closeCallback = () => {
-  this.drawerClose();
-};
+    this.drawerClose();
+  };
 
 }
