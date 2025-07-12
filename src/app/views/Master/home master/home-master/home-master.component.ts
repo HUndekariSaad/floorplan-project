@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { HomeDrawerComponent } from '../home-drawer/home-drawer.component';
 import { ApiService } from '../../../../services/api.service';
-import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-home-master',
-    standalone: true,
-  imports: [HomeDrawerComponent,HttpClientModule],
+  imports: [HomeDrawerComponent],
   templateUrl: './home-master.component.html',
   styleUrl: './home-master.component.scss'
 })
