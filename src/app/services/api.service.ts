@@ -8,59 +8,75 @@ import { map, Observable } from 'rxjs';
 })
 export class ApiService {
 
-  baseUrl : string = environment.apiBaseUrl;
+  baseUrl: string = environment.apiBaseUrl;
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  postDataApi(type:any,data : any): Observable<any> {
+  postDataApi(type: any, data: any): Observable<any> {
 
 
-    const headers = new HttpHeaders({
+    let headers = new HttpHeaders({
       'Content-Type': 'application/json'
     });
-    return this.http.post(this.baseUrl + type, data,{ headers });
+    const token = sessionStorage.getItem('auth_token');
+    if (token) {
+      headers = headers.set('Authorization', `Bearer ${token}`);
+    }
+    return this.http.post(this.baseUrl + type, data, { headers });
   }
   postpassDataApi(url: string, payload: any, httpOptions?: any): Observable<any> {
     return this.http.post(this.baseUrl + url, payload, httpOptions);
   }
   updateuserDataApi(type: any, data: any, id: any): Observable<any> {
-    const headers = new HttpHeaders({
+    let headers = new HttpHeaders({
       'Content-Type': 'application/json'
     });
+    const token = sessionStorage.getItem('auth_token');
+    if (token) {
+      headers = headers.set('Authorization', `Bearer ${token}`);
+    }
     return this.http.post(this.baseUrl + type, data, {
       headers,
       responseType: 'text' as 'json'  // 👈 Fix for non-JSON responses
     });
   }
-  
-  updateDataApi(type:any,data : any,id :any): Observable<any> {
-    const headers = new HttpHeaders({
+
+  updateDataApi(type: any, data: any, id: any): Observable<any> {
+    let headers = new HttpHeaders({
       'Content-Type': 'application/json'
     });
-    return this.http.put(this.baseUrl + type + '/' + id, data,{ headers });
+    const token = sessionStorage.getItem('auth_token');
+    if (token) {
+      headers = headers.set('Authorization', `Bearer ${token}`);
+    }
+    return this.http.put(this.baseUrl + type + '/' + id, data, { headers });
   }
 
-  updateRoleDataApi(type:any,data : any,id :any): Observable<any> {
-    const headers = new HttpHeaders({
+  updateRoleDataApi(type: any, data: any, id: any): Observable<any> {
+    let headers = new HttpHeaders({
       'Content-Type': 'application/json'
     });
-    return this.http.put(this.baseUrl + type + '/' + id, data,{ headers });
+    const token = sessionStorage.getItem('auth_token');
+    if (token) {
+      headers = headers.set('Authorization', `Bearer ${token}`);
+    }
+    return this.http.put(this.baseUrl + type + '/' + id, data, { headers });
   }
-  deleteDataApi(type:any,data: any): Observable<any> {
+  deleteDataApi(type: any, data: any): Observable<any> {
     return this.http.delete(this.baseUrl + type + '/' + data);
   }
   deleteSpocDataApi(url: string, id: string): Observable<string> {
-  const apiUrl = `${this.baseUrl}${url}/${id}`;
-  return this.http.delete(apiUrl, { responseType: 'text' });
-}
+    const apiUrl = `${this.baseUrl}${url}/${id}`;
+    return this.http.delete(apiUrl, { responseType: 'text' });
+  }
 
 
-  deleteRolePermissionDataApi(type:any,data: any): Observable<any> {
+  deleteRolePermissionDataApi(type: any, data: any): Observable<any> {
     return this.http.delete(this.baseUrl + type, { body: data });
   }
-  
+
   deleteRolePermissionDataApi1(type: any, data: any, p0: { responseType: string; }): Observable<any> {
-    return this.http.delete(this.baseUrl + type, { 
+    return this.http.delete(this.baseUrl + type, {
       body: data,
       responseType: 'text' // Ensure response is treated as plain text
     });
@@ -68,8 +84,8 @@ export class ApiService {
   postDataApipermission(type: string, data: any) {
     return this.http.post(this.baseUrl + type, data, { responseType: 'text' });
   }
-  
-  getDataApi(type:any): Observable<any> {
+
+  getDataApi(type: any): Observable<any> {
     return this.http.get(this.baseUrl + type);
   }
 
@@ -77,18 +93,22 @@ export class ApiService {
     return this.http.get(this.baseUrl + type, options);
   }
 
-  uploadFile(type:any,data: any): Observable<any> {
-    return this.http.post(this.baseUrl + type, data,{ responseType: 'text' });
+  uploadFile(type: any, data: any): Observable<any> {
+    return this.http.post(this.baseUrl + type, data, { responseType: 'text' });
   }
 
-  downloadFile(type:any) {
+  downloadFile(type: any) {
     return this.http.get(this.baseUrl + type, { responseType: 'blob' });
   }
 
   postDataApiforLocationTransfeering(type: string, data: any): Observable<any> {
-    const headers = new HttpHeaders({
+    let headers = new HttpHeaders({
       'Content-Type': 'application/json'
     });
+    const token = sessionStorage.getItem('auth_token');
+    if (token) {
+      headers = headers.set('Authorization', `Bearer ${token}`);
+    }
     return this.http.post(this.baseUrl + type, data, {
       headers,
       responseType: 'text'  // Tell HttpClient to expect text response

@@ -125,6 +125,8 @@ export class LoginComponent {
         const token = res?.token?.result || res?.token || res?.result;
         if (token) {
           sessionStorage.setItem('token', token); // Match this key in AuthGuard
+          sessionStorage.setItem('auth_token', token);
+          sessionStorage.setItem('authToken', token);
           Swal.fire('Success!', 'Login Successful', 'success');
           this.router.navigate(['/dashboard']);
           this.loginForm.reset();
