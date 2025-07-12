@@ -7,6 +7,8 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { HttpClient } from '@angular/common/http';
 import { switchAll } from 'rxjs';
 import { ApiService } from '../../services/api.service';
+import Swal from 'sweetalert2'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +21,7 @@ export class LoginComponent {
 
     loginForm: FormGroup;
 
-  constructor(private api: ApiService,private fb: FormBuilder, private http: HttpClient) {
+  constructor(private api: ApiService,private fb: FormBuilder, private http: HttpClient,private router: Router) {
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
@@ -39,18 +41,18 @@ export class LoginComponent {
 
   this.api.postDataApi('api/Auth/login', credentials).subscribe({
     next: (res: any) => {
-      // switchAll.fire('Success!', 'Login Successful', 'success');
+     Swal.fire('Success!', 'Login Successful', 'success');
       // this.isLoading = false;
 
       // ✅ Optionally store token
       if (res.token) {
-        localStorage.setItem('auth_token', res.token.result);
+        sessionStorage.setItem('auth_token', res.token.result);
       }
 
       this.loginForm.reset();
 
       // 🔐 Redirect to dashboard or home
-      // this.router.navigate(['/dashboard']);
+      this.router.navigate(['/dashboard']);
     },
     error: (err) => {
       const errorMessage = err?.error?.message || err?.message || 'Login failed';
