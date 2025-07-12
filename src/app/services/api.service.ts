@@ -85,9 +85,17 @@ export class ApiService {
     return this.http.post(this.baseUrl + type, data, { responseType: 'text' });
   }
 
-  getDataApi(type: any): Observable<any> {
-    return this.http.get(this.baseUrl + type);
+getDataApi(type: any): Observable<any> {
+  const token = sessionStorage.getItem('auth_token');
+
+  let headers = new HttpHeaders();
+
+  if (token) {
+    headers = headers.set('Authorization', `Bearer ${token}`);
   }
+
+  return this.http.get(this.baseUrl + type, { headers });
+}
 
   getDataApiWithParams(type: any, options: { params?: HttpParams } = {}): Observable<any> {
     return this.http.get(this.baseUrl + type, options);
