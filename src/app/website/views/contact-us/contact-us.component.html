@@ -27,7 +27,7 @@
 
       <!-- Right Contact Form -->
       <div class="col-md-7">
-        <form >
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
           <div class="row g-3">
             <div class="col-md-6">
               <input formControlName="firstName" type="text" class="form-control" placeholder="First Name" />
@@ -39,7 +39,7 @@
               <input formControlName="email" type="email" class="form-control" placeholder="Email" />
             </div>
             <div class="col-md-6">
-              <input formControlName="phone" type="tel" class="form-control" placeholder="Phone Number" />
+              <input formControlName="phoneNumber" type="tel" class="form-control" placeholder="Phone Number" />
             </div>
 
             <div class="col-12">

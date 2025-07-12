@@ -12,3 +12,23 @@
   background-color: #f8f9fa !important;
    color: black;
 }
+
+
+nav.navbar {
+  position: sticky !important;   // or fixed
+  top: 0;
+  z-index: 1050;
+  transition: none !important;
+  transform: none !important;
+  animation: none !important;
+  backface-visibility: hidden;
+  will-change: auto;
+}
+
+
+nav.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1050;
+}

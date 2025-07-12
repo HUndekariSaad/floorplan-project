@@ -18,7 +18,7 @@ export class ApiService {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json'
     });
-    const token = sessionStorage.getItem('auth_token');
+    const token = sessionStorage.getItem('authToken');
     if (token) {
       headers = headers.set('Authorization', `Bearer ${token}`);
     }
@@ -31,7 +31,7 @@ export class ApiService {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json'
     });
-    const token = sessionStorage.getItem('auth_token');
+    const token = sessionStorage.getItem('authToken');
     if (token) {
       headers = headers.set('Authorization', `Bearer ${token}`);
     }
@@ -45,7 +45,7 @@ export class ApiService {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json'
     });
-    const token = sessionStorage.getItem('auth_token');
+    const token = sessionStorage.getItem('authToken');
     if (token) {
       headers = headers.set('Authorization', `Bearer ${token}`);
     }
@@ -56,7 +56,7 @@ export class ApiService {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json'
     });
-    const token = sessionStorage.getItem('auth_token');
+    const token = sessionStorage.getItem('authToken');
     if (token) {
       headers = headers.set('Authorization', `Bearer ${token}`);
     }
@@ -86,7 +86,7 @@ export class ApiService {
   }
 
 getDataApi(type: any): Observable<any> {
-  const token = sessionStorage.getItem('auth_token');
+  const token = sessionStorage.getItem('authToken');
 
   let headers = new HttpHeaders();
 
@@ -113,7 +113,7 @@ getDataApi(type: any): Observable<any> {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json'
     });
-    const token = sessionStorage.getItem('auth_token');
+    const token = sessionStorage.getItem('authToken');
     if (token) {
       headers = headers.set('Authorization', `Bearer ${token}`);
     }

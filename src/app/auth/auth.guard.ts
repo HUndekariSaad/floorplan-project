@@ -12,7 +12,7 @@ export class AuthGuard implements CanActivate {
   constructor(private router: Router, private globalService: GlobalService) {}
 
   canActivate(): boolean {
-    const token = sessionStorage.getItem('token'); // Or get from GlobalService
+    const token = sessionStorage.getItem('authToken'); // Or get from GlobalService
     if (token) {
       return true;
     } else {

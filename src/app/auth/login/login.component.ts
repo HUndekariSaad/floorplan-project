@@ -124,8 +124,6 @@ export class LoginComponent {
         // ✅ Store the token (adjust key based on your response structure)
         const token = res?.token?.result || res?.token || res?.result;
         if (token) {
-          sessionStorage.setItem('token', token); // Match this key in AuthGuard
-          sessionStorage.setItem('auth_token', token);
           sessionStorage.setItem('authToken', token);
           Swal.fire('Success!', 'Login Successful', 'success');
           this.router.navigate(['/dashboard']);
