@@ -1,0 +1,68 @@
+<div class="container mt-4">
+  <div class="row align-items-center mb-3">
+    <div class="col-12 col-md-8">
+      <h5 class="fw-bold">{{ formTitle }}</h5>
+    </div>
+    <div class="col-12 col-md-4 d-flex justify-content-md-end mt-2 mt-md-0">
+      <button type="button" class="btn btn-primary" (click)="add()">
+        <i class="bi bi-plus"></i> Add New Client
+      </button>
+    </div>
+  </div>
+
+  <table class="table table-bordered table-hover">
+    <thead class="table-light">
+      <tr>
+        <th>Action</th>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Company</th>
+        <th>GST</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Pincode</th>
+        <th>Client Type</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of clientList">
+        <td>
+          <button class="btn btn-sm btn-primary me-1" (click)="edit(client)">Edit</button>
+          <button class="btn btn-sm btn-danger" (click)="delete(client)">Delete</button>
+        </td>
+        <td>{{ client.fullName || '-' }}</td>
+        <td>{{ client.email || '-' }}</td>
+        <td>{{ client.phoneNumber || '-' }}</td>
+        <td>{{ client.companyName || '-' }}</td>
+        <td>{{ client.gstNumber || '-' }}</td>
+        <td>{{ client.city || '-' }}</td>
+        <td>{{ client.state || '-' }}</td>
+        <td>{{ client.pincode || '-' }}</td>
+        <td>{{ client.clientType || '-' }}</td>
+        <td>{{ client.addressLine || '-' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Drawer -->
+<div
+  class="offcanvas offcanvas-end"
+  tabindex="-1"
+  [class.show]="drawerVisible"
+  [style.visibility]="drawerVisible ? 'visible' : 'hidden'"
+  style="width: 800px;"
+>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">{{ drawerTitle }}</h5>
+    <button type="button" class="btn-close" (click)="drawerClose()"></button>
+  </div>
+  <div class="offcanvas-body p-2">
+    <app-indianclientdrawer
+      [drawerClose]="closeCallback"
+      [drawerVisible]="drawerVisible"
+    ></app-indianclientdrawer>
+  </div>
+</div>
