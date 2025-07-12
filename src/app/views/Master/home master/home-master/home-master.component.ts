@@ -1,14 +1,25 @@
 import { Component } from '@angular/core';
 import { HomeDrawerComponent } from '../home-drawer/home-drawer.component';
+import { ApiService } from '../../../../services/api.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-home-master',
-  imports: [HomeDrawerComponent],
+    standalone: true,
+  imports: [HomeDrawerComponent,HttpClientModule],
   templateUrl: './home-master.component.html',
   styleUrl: './home-master.component.scss'
 })
 export class HomeMasterComponent {
   formTitle = "Home Master"
+  apiKey: string = 'api/HomeMaster';
+  HomeList: any = [];
+  ngOnInit() {
+    this.getData();
+  }
+  constructor(private api: ApiService) {
+
+  }
   homeList = [
     { description: 'Welcome to Our Website', imageUrl: 'https://via.placeholder.com/100' },
     { description: 'Explore Our Services', imageUrl: '' }
@@ -39,5 +50,12 @@ export class HomeMasterComponent {
   closeCallback = () => {
   this.drawerClose();
 };
-
+  getData() {
+    this.api.getDataApi(this.apiKey).subscribe((res: any) => {
+      this.HomeList = res;
+    })
+  }
 }
+
+
+
