@@ -4,6 +4,7 @@ import { Renderer2 } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
 import { AvatarComponent, BadgeComponent, BreadcrumbRouterComponent, ColorModeService, ContainerComponent, DropdownComponent, DropdownDividerDirective, DropdownHeaderDirective, DropdownItemDirective, DropdownMenuDirective, DropdownToggleDirective, HeaderNavComponent, HeaderTogglerDirective, NavItemComponent, NavLinkDirective, SidebarToggleDirective } from '@coreui/angular';
 import { IconDirective } from '@coreui/icons-angular';
+import { ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -12,9 +13,21 @@ import { IconDirective } from '@coreui/icons-angular';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  element: any;
+  @ViewChild('navbar') element!: ElementRef;
 
-constructor(private renderer: Renderer2,public colorModeService: ColorModeService) {}
+  constructor(private renderer: Renderer2, public colorModeService: ColorModeService) {}
+
+  ngAfterViewInit() {
+    // You can log this.element here if needed
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const offset = window.scrollY;
+    if (this.element?.nativeElement) {
+      this.renderer.setStyle(this.element.nativeElement, 'transform', `translateY(${offset}px)`);
+    }
+  }
 
   setDarkMode() {
     this.renderer.removeClass(document.body, 'light-mode');
@@ -42,12 +55,6 @@ constructor(private renderer: Renderer2,public colorModeService: ColorModeServic
     return this.colorModes.find(mode => mode.name === currentMode)?.icon ?? 'cilSun';
   });
 
-
-  @HostListener('window:scroll', [])
-onWindowScroll() {
-  const offset = window.scrollY;
-  this.renderer.setStyle(this.element.nativeElement, 'transform', `translateY(${offset}px)`);
-}
-
+ 
   
 }

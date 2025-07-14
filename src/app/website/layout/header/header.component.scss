@@ -32,3 +32,7 @@ nav.navbar {
   width: 100%;
   z-index: 1050;
 }
+nav.scrolled {
+  background-color: #fff;
+  transition: background-color 0.3s;
+}
