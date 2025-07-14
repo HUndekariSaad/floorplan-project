@@ -18,9 +18,9 @@ export class HomeDrawerComponent {
   HomeList: any = [];
   isLoading = false;
   homeData: any = {
-    mainTitle: '',
+    MainTitle: '',
     subTitle: '',
-    aboutCompany: '',
+    AboutCompany: '',
     whyChooseUs: '',
     yearsOfExperience: '',
     serviceHighlightOne: '',
@@ -31,7 +31,7 @@ export class HomeDrawerComponent {
     teamDescription: '',
     bannerImage: null,
     teamGroupImage: null,
-    galleryImages: [],
+    GalleryImages: [],
   };
   constructor(private api: ApiService) {
 

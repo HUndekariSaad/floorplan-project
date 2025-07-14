@@ -47,6 +47,20 @@ export const routes: Routes = [
           title: 'Client Testimonial'
         }
       }, 
+         {
+        path: 'IndianClient',
+        loadComponent: () => import('./Indian-client/indianclientmaster/indianclientmaster.component').then(m => m.IndianclientmasterComponent),
+        data: {
+          title: 'Indian Clinet'
+        }
+      },
+       {
+        path: 'IndianLogoClient',
+        loadComponent: () => import('./Indian-client-logo/indianclientlogomaster/indianclientlogomaster.component').then(m => m.IndianclientlogomasterComponent),
+        data: {
+          title: 'Indian Client Logo'
+        }
+      },
       
     ]
   }

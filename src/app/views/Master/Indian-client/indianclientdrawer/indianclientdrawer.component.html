@@ -1,0 +1,41 @@
+<div class="container mt-4">
+  <form #clientForm="ngForm">
+    <div class="row">
+      <div class="col-md-6 mb-3" *ngFor="let field of textFields">
+        <label class="form-label fw-bold">{{ field.label }}</label>
+        <input
+          type="text"
+          class="form-control"
+          name="{{ field.name }}"
+          [(ngModel)]="clientData[field.name]"
+          placeholder="Enter {{ field.label }}"
+        />
+      </div>
+    </div>
+
+    <!-- Textarea for Address -->
+    <div class="mb-3">
+      <label class="form-label fw-bold">Address Line</label>
+      <textarea
+        class="form-control"
+        name="addressLine"
+        [(ngModel)]="clientData.addressLine"
+        rows="3"
+        maxlength="256"
+      ></textarea>
+      <div class="form-text text-end text-muted">
+        {{ clientData.addressLine?.length || 0 }}/256
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="d-flex justify-content-end">
+      <button type="button" class="btn btn-secondary me-2" (click)="clearForm(clientForm)">
+        Cancel
+      </button>
+      <button type="button" class="btn btn-primary" (click)="save(clientForm)">
+        Save
+      </button>
+    </div>
+  </form>
+</div>

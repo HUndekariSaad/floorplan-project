@@ -1,0 +1,61 @@
+<div class="container mt-4">
+  <div class="row align-items-center mb-3">
+    <div class="col-12 col-md-8">
+      <h5 class="fw-bold">{{ formTitle }}</h5>
+    </div>
+    <div class="col-12 col-md-4 d-flex justify-content-md-end mt-2 mt-md-0">
+      <form class="d-flex align-items-center flex-wrap">
+        <div>
+          <button type="button" class="btn btn-primary" (click)="add()">
+            <i class="bi bi-plus"></i> Add New Client
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <table class="table table-bordered table-hover">
+    <thead class="table-light">
+      <tr>
+        <th>Action</th>
+        <th>Client Name</th>
+        <th>Website URL</th>
+        <th>Logo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of clientList">
+        <td>
+          <button class="btn btn-sm btn-primary me-1" (click)="edit(item)">Edit</button>
+          <button class="btn btn-sm btn-danger" (click)="delete(item)">Delete</button>
+        </td>
+        <td>{{ item.clientName || '-' }}</td>
+        <td>{{ item.websiteUrl || '-' }}</td>
+        <td>
+          <img *ngIf="item.logoUrl" [src]="item.logoUrl" alt="Logo" width="80" class="img-thumbnail" />
+          <span *ngIf="!item.logoUrl">-</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Drawer -->
+<div
+  class="offcanvas offcanvas-end"
+  tabindex="-1"
+  [class.show]="drawervisible"
+  [style.visibility]="drawervisible ? 'visible' : 'hidden'"
+  style="width: 400px;"
+>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">{{ drawerTitle }}</h5>
+    <button type="button" class="btn-close" (click)="drawerClose()"></button>
+  </div>
+  <div class="offcanvas-body p-2">
+    <app-indianclientlogodrawer
+      [drawerClose]="closeCallback"
+      [drawerVisible]="drawervisible"
+    ></app-indianclientlogodrawer>
+  </div>
+</div>
