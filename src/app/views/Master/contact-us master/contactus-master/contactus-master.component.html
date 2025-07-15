@@ -1,18 +1,18 @@
 <div class="container mt-4">
-    <div class="row align-items-center mb-3">
-  <div class="col-12 col-md-8">
-    <h5 class="fw-bold">{{ formTitle }}</h5>
+  <div class="row align-items-center mb-3">
+    <div class="col-12 col-md-8">
+      <h5 class="fw-bold">{{ formTitle }}</h5>
+    </div>
+    <div class="col-12 col-md-4 d-flex justify-content-md-end mt-2 mt-md-0">
+      <form class="d-flex align-items-center flex-wrap">
+        <div>
+          <button type="button" class="btn btn-primary" (click)="add()">
+            <i class="bi bi-plus"></i> Add New Picture
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
-  <div class="col-12 col-md-4 d-flex justify-content-md-end mt-2 mt-md-0">
-    <form class="d-flex align-items-center flex-wrap">
-      <div>
-        <button type="button" class="btn btn-primary" (click)="add()">
-          <i class="bi bi-plus"></i> Add New Picture 
-        </button>
-      </div>
-    </form>
-  </div>
-</div>
 
   <!-- <h4 class="mb-3">Home Master List</h4> -->
   <table class="table table-bordered table-hover">
@@ -24,16 +24,22 @@
         <th>Phone</th>
         <th>Selected Services</th>
         <th>Message</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
-     <tr *ngFor="let contact of dummyContactList; let i = index">
+      <tr *ngFor="let contact of contactList; let i = index">
         <td>{{ i + 1 }}</td>
         <td>{{ contact.firstName }} {{ contact.lastName }}</td>
         <td>{{ contact.email }}</td>
-        <td>{{ contact.phone }}</td>
-        <td>{{ contact.service.join(', ') }}</td>
+        <td>{{ contact.phoneNumber }}</td>
+        <td>{{ contact.service }}</td>
         <td>{{ contact.message }}</td>
+        <td>
+          <button class="btn btn-danger btn-sm" (click)="deleteContact(contact.id)">
+            <i class="bi bi-trash"></i> Delete
+          </button>
+        </td>
       </tr>
     </tbody>
   </table>

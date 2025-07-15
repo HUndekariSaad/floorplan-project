@@ -61,3 +61,34 @@
   right: 0;
   background: linear-gradient(to left, #ffffff, transparent);
 }
+
+
+.client-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+   color: #f15a29;
+}
+.capacity-title
+{
+    color: #f15a29;
+     text-align: center;
+}
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 logos per row */
+  gap: 20px;
+  justify-items: center; /* Centers the content inside each grid item */
+  padding: 20px 0;
+}
+
+.client-card {
+  text-align: center;
+}
+
+.client-card img {
+  max-width: 100px; /* Adjust size as needed */
+  height: auto;
+  display: block;
+  margin: 0 auto 8px;
+}

@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   border: 6px double #fff;
 }
 
@@ -29,12 +29,12 @@
 
 .overlay-content h1 {
   font-size: 48px;
-  font-weight: 800;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 
 .overlay-content p {
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.8;
 }
 
@@ -71,7 +71,7 @@
   width: 100%;
   max-width: 500px;
   border-radius: 12px;
-  border: 4px double #e0e0e0;
+  // border: 4px double #e0e0e0;
 }
 
 .section-text {
@@ -110,11 +110,11 @@
 }
 
 .section-text {
-  max-width: 500px;
+  max-width: 600px;
 }
 
 .section-image img {
-  width: 300px;
+  width: 400px;
   height: auto;
   border-radius: 10px;
 }
@@ -164,18 +164,20 @@
 }
 
 .capacity-section {
+  text-align: center;
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  align-items: flex-start;
+  // align-items: flex-start;
   padding: 40px 20px;
+  margin-bottom: 60px;
   // background-color: #fff;
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 .capacity-section {
   display: flex;
-  align-items: flex-start;
+   text-align: center;
   gap: 40px;
   padding: 81px 0 0 156px;
 }
@@ -218,7 +220,7 @@
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 300px;
+  width: 333px;
   transition: transform 0.3s;
 }
 

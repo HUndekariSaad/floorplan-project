@@ -10,6 +10,16 @@ export const navItems: INavData[] = [
       text: 'NEW'
     }
   },
+   {
+        name: 'Contact Us Master',
+        url: '/Master/contactus',
+        icon: 'nav-icon-bullet'
+      },
+        {
+        name: 'Services Master',
+        url: '/Master/service',
+        icon: 'nav-icon-bullet'
+      },
   // {
   //   title: true,
   //   name: 'Theme'
@@ -52,49 +62,49 @@ export const navItems: INavData[] = [
       
   //   ]
   // },
-   { name: 'Master',
-    url: '/Master',
-    iconComponent: { name: 'cil-puzzle' },
-    children: [
+  //  { name: 'Master',
+  //   url: '/Master',
+  //   iconComponent: { name: 'cil-puzzle' },
+  //   children: [
   
-       {
-        name: 'Home Master',
-        url: '/Master/home',
-        icon: 'nav-icon-bullet'
-      },
-      {
-        name: 'About Us Master',
-        url: '/Master/aboutus',
-        icon: 'nav-icon-bullet'
-      },
-      {
-        name: 'Contact Us Master',
-        url: '/Master/contactus',
-        icon: 'nav-icon-bullet'
-      },
-        {
-        name: 'Services Master',
-        url: '/Master/service',
-        icon: 'nav-icon-bullet'
-      },
+  //     //  {
+  //     //   name: 'Home Master',
+  //     //   url: '/Master/home',
+  //     //   icon: 'nav-icon-bullet'
+  //     // },
+  //     // {
+  //     //   name: 'About Us Master',
+  //     //   url: '/Master/aboutus',
+  //     //   icon: 'nav-icon-bullet'
+  //     // },
+  //     // {
+  //     //   name: 'Contact Us Master',
+  //     //   url: '/Master/contactus',
+  //     //   icon: 'nav-icon-bullet'
+  //     // },
+  //     //   {
+  //     //   name: 'Services Master',
+  //     //   url: '/Master/service',
+  //     //   icon: 'nav-icon-bullet'
+  //     // },
 
-      {
-        name: 'Clienet Testimonial Master',
-        url: '/Master/client',
-        icon: 'nav-icon-bullet'
-      },
-        {
-        name: 'Indian Client Master',
-        url: '/Master/IndianClient',
-        icon: 'nav-icon-bullet'
-      },
-       {
-        name: 'Indian Client Logo Master',
-        url: '/Master/IndianLogoClient',
-        icon: 'nav-icon-bullet'
-      },
-    ]
-  }
+  //     // {
+  //     //   name: 'Clienet Testimonial Master',
+  //     //   url: '/Master/client',
+  //     //   icon: 'nav-icon-bullet'
+  //     // },
+  //     //   {
+  //     //   name: 'Indian Client Master',
+  //     //   url: '/Master/IndianClient',
+  //     //   icon: 'nav-icon-bullet'
+  //     // },
+  //     //  {
+  //     //   name: 'Indian Client Logo Master',
+  //     //   url: '/Master/IndianLogoClient',
+  //     //   icon: 'nav-icon-bullet'
+  //     // },
+  //   ]
+  // }
       // {
       //   name: 'Contact Information Master',
       //   url: '/base/list-group',
@@ -218,33 +228,7 @@ export const navItems: INavData[] = [
   //     }
   //   ]
   // },
-  ,{
-    name: 'Notifications',
-    url: '/notifications',
-    iconComponent: { name: 'cil-bell' },
-    children: [
-      // {
-      //   name: 'Alerts',
-      //   url: '/notifications/alerts',
-      //   icon: 'nav-icon-bullet'
-      // },
-      // {
-      //   name: 'Badges',
-      //   url: '/notifications/badges',
-      //   icon: 'nav-icon-bullet'
-      // },
-      // {
-      //   name: 'Modal',
-      //   url: '/notifications/modal',
-      //   icon: 'nav-icon-bullet'
-      // },
-      // {
-      //   name: 'Toast',
-      //   url: '/notifications/toasts',
-      //   icon: 'nav-icon-bullet'
-      // }
-    ]
-  },
+
   {
     name: 'Help',
     url: '/widgets',

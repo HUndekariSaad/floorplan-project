@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact-us',
-  imports: [RouterModule, ReactiveFormsModule,CommonModule],
+  imports: [RouterModule, ReactiveFormsModule, CommonModule],
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.scss'
 })
@@ -42,8 +42,13 @@ export class ContactUsComponent {
       Swal.fire('Error', 'Please fill all required fields correctly.', 'error');
       return;
     }
+ const rawValue = this.contactForm.value;
 
-    this.api.postDataApi('api/ContactUs/create', this.contactForm.value).subscribe({
+  const payload = {
+    ...rawValue,
+    service: rawValue.service.join(', ') // ✅ create string without extra quotes
+  };
+    this.api.postDataApi('api/ContactUs/create', payload).subscribe({
       next: () => {
         Swal.fire('Success', 'Message sent successfully!', 'success');
         this.contactForm.reset();
@@ -55,16 +60,27 @@ export class ContactUsComponent {
     });
   }
 
-onCheckboxChange(event: any) {
-  const serviceArray: FormArray = this.contactForm.get('service') as FormArray;
 
-  if (event.target.checked) {
-    serviceArray.push(this.fb.control(event.target.value));
-  } else {
-    const index = serviceArray.controls.findIndex(x => x.value === event.target.value);
-    if (index >= 0) serviceArray.removeAt(index);
+  selectedServices: string[] = [];
+
+  get serviceArray(): FormArray {
+    return this.contactForm.get('service') as FormArray;
   }
-}
+
+  onCheckboxChange(event: any): void {
+    const serviceArray = this.serviceArray;
+    const value = event.target.value;
+
+    if (event.target.checked) {
+      serviceArray.push(this.fb.control(value));
+    } else {
+      const index = serviceArray.controls.findIndex(x => x.value === value);
+      if (index >= 0) {
+        serviceArray.removeAt(index);
+      }
+    }
+  }
+
 
   getServiceId(service: string): string {
     return service.replace(/ /g, '-');

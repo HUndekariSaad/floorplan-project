@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../../../../services/api.service';
 import { CommonModule } from '@angular/common';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contactus-master',
@@ -9,76 +10,66 @@ import { CommonModule } from '@angular/common';
   styleUrl: './contactus-master.component.scss'
 })
 export class ContactusMasterComponent {
- formTitle = "Home Master"
-  apiKey: string = 'api/HomeMaster';
-  HomeList: any  = [];
+  formTitle = "Home Master"
+  apiKey: string = 'api/ContactUs';
+  contactList: any = [];
+  http: any;
 
-  dummyContactList = [
-  {
-    firstName: 'John',
-    lastName: 'Doe',
-    email: 'john.doe@example.com',
-    phone: '9876543210',
-    service: ['Epoxy Flooring', 'Tile Protection'],
-    message: 'I need epoxy flooring for my warehouse.'
-  },
-  {
-    firstName: 'Jane',
-    lastName: 'Smith',
-    email: 'jane.smith@example.com',
-    phone: '9123456789',
-    service: ['PU Coating', 'Self-leveling Screed'],
-    message: 'Interested in PU coating and screed service.'
-  },
-  {
-    firstName: 'Rahul',
-    lastName: 'Patel',
-    email: 'rahul.patel@example.com',
-    phone: '9988776655',
-    service: ['Under Water Coating'],
-    message: 'Need coating for water tank.'
-  }
-];
-
- constructor(private api: ApiService) {
+  constructor(private api: ApiService) {
 
   }
 
   ngOnInit() {
     this.getData();
   }
- 
-
-
-  
 
   edit(item: any): void {
     alert('Edit clicked: ' + item.description);
   }
 
-  delete(item: any): void {
-    const index = this.HomeList.indexOf(item);
-    if (index !== -1) {
-      this.HomeList.splice(index, 1);
+   deleteContact (id: number): void {
+  Swal.fire({
+    title: 'Are you sure?',
+    text: 'You won’t be able to revert this!',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Yes, delete it!',
+    cancelButtonText: 'No, cancel!',
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // const apiUrl = `http://amkore7-001-site1.ltempurl.com/api/ContactUs/${id}`;
+      this.http.delete(this.apiKey,id).subscribe({
+        next: () => {
+          Swal.fire('Deleted!', 'Contact has been deleted.', 'success');
+           this.getData();
+        },
+        error: (err: any) => {
+          Swal.fire('Error!', 'Failed to delete contact.', 'error');
+          console.error(err);
+        }
+      });
     }
-  }
-   drawerTitle = "Add New picture";
+  });
+}
+
+
+  drawerTitle = "Add New picture";
   // drawerData: CustmoerCategoryData = new CustmoerCategoryData();
   drawervisible = false;
-  add(){
-     this.drawerTitle = "Add new Picture";
+  add() {
+    this.drawerTitle = "Add new Picture";
     this.drawervisible = true;
   }
   drawerClose(): void {
-  this.drawervisible = false;
-}
+    this.drawervisible = false;
+  }
 
   closeCallback = () => {
-  this.drawerClose();
-};
+    this.drawerClose();
+  };
   getData() {
     this.api.getDataApi(this.apiKey).subscribe((res: any) => {
-      this.HomeList = res;
+      this.contactList = res;
     })
   }
 }
