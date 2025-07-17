@@ -26,7 +26,8 @@ export class ContactusMasterComponent {
   edit(item: any): void {
     alert('Edit clicked: ' + item.description);
   }
-deleteContact(id: number): void {
+
+   deleteContact (id: number): void {
   Swal.fire({
     title: 'Are you sure?',
     text: 'You won’t be able to revert this!',
@@ -36,11 +37,11 @@ deleteContact(id: number): void {
     cancelButtonText: 'No, cancel!',
   }).then((result) => {
     if (result.isConfirmed) {
-      const deleteUrl = `http://amkore7-001-site1.ltempurl.com/api/ContactUs/${id}`;
-      this.api.deletedataDataApi(deleteUrl).subscribe({
+      // const apiUrl = `http://amkore7-001-site1.ltempurl.com/api/ContactUs/${id}`;
+      this.http.delete(this.apiKey,id).subscribe({
         next: () => {
           Swal.fire('Deleted!', 'Contact has been deleted.', 'success');
-          this.getData();
+           this.getData();
         },
         error: (err: any) => {
           Swal.fire('Error!', 'Failed to delete contact.', 'error');
@@ -50,31 +51,6 @@ deleteContact(id: number): void {
     }
   });
 }
-
-//    deleteContact (id: number): void {
-//   Swal.fire({
-//     title: 'Are you sure?',
-//     text: 'You won’t be able to revert this!',
-//     icon: 'warning',
-//     showCancelButton: true,
-//     confirmButtonText: 'Yes, delete it!',
-//     cancelButtonText: 'No, cancel!',
-//   }).then((result) => {
-//     if (result.isConfirmed) {
-//       // const apiUrl = `http://amkore7-001-site1.ltempurl.com/api/ContactUs/${id}`;
-//       this.http.delete(this.apiKey,id).subscribe({
-//         next: () => {
-//           Swal.fire('Deleted!', 'Contact has been deleted.', 'success');
-//            this.getData();
-//         },
-//         error: (err: any) => {
-//           Swal.fire('Error!', 'Failed to delete contact.', 'error');
-//           console.error(err);
-//         }
-//       });
-//     }
-//   });
-// }
 
 
   drawerTitle = "Add New picture";
