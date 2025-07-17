@@ -85,17 +85,17 @@ export class ApiService {
     return this.http.post(this.baseUrl + type, data, { responseType: 'text' });
   }
 
-getDataApi(type: any): Observable<any> {
-  const token = sessionStorage.getItem('authToken');
+  getDataApi(type: any): Observable<any> {
+    const token = sessionStorage.getItem('authToken');
 
-  let headers = new HttpHeaders();
+    let headers = new HttpHeaders();
 
-  if (token) {
-    headers = headers.set('Authorization', `Bearer ${token}`);
+    if (token) {
+      headers = headers.set('Authorization', `Bearer ${token}`);
+    }
+
+    return this.http.get(this.baseUrl + type, { headers });
   }
-
-  return this.http.get(this.baseUrl + type, { headers });
-}
 
   getDataApiWithParams(type: any, options: { params?: HttpParams } = {}): Observable<any> {
     return this.http.get(this.baseUrl + type, options);
@@ -132,4 +132,9 @@ getDataApi(type: any): Observable<any> {
       })
     );
   }
+
+  deletedataDataApi(url: string) {
+    return this.http.delete(url, { responseType: 'text' }); // assuming you're using HttpClient from @angular/common/http
+  }
+
 }

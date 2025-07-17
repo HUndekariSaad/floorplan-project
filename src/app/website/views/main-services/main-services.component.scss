@@ -82,13 +82,26 @@
   padding: 20px 0;
 }
 
+
+/* Client card */
 .client-card {
+  width: 189px;
+  height: 189px;
+  border: 1px solid #eee;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
+/* Image inside card */
 .client-card img {
-  max-width: 100px; /* Adjust size as needed */
-  height: auto;
-  display: block;
-  margin: 0 auto 8px;
+  max-height: 80px;
+  max-width: 100%;
+  object-fit: contain;
+  margin-bottom: 10px;
 }
