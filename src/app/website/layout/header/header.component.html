@@ -26,8 +26,12 @@
                     <a class="nav-link" routerLink="/services" routerLinkActive="active">Services</a>
                 </li>
             </ul>
+            <button (click)="toggleTheme()" class="btn btn-sm btn-outline-secondary">
+                {{ isDarkMode ? '🌙 Dark' : '☀️ Light' }}
+            </button>
+
             <!-- dark-mode-toggle.component.html -->
-            <div class="d-flex align-items-center gap-2">
+            <!-- <div class="d-flex align-items-center gap-2">
                 <c-header-nav class="ms-auto ms-md-0">
                     <div class="nav-item py-1">
                         <div class="vr h-100 mx-2 text-body text-opacity-75"></div>
@@ -39,7 +43,7 @@
                 </c-header-nav>
 
                 <c-header-nav class="mx-0">
-                    <!-- <ng-container *ngTemplateOutlet="userDropdown" /> -->
+                
                 </c-header-nav>
                 <ng-template #themeDropdown>
                     <c-dropdown alignment="end" variant="nav-item">
@@ -57,7 +61,7 @@
                         </div>
                     </c-dropdown>
                 </ng-template>
-            </div>
+            </div> -->
 
 
 

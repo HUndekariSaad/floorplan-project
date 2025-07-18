@@ -54,7 +54,40 @@ export class HeaderComponent {
     const currentMode = this.colorMode();
     return this.colorModes.find(mode => mode.name === currentMode)?.icon ?? 'cilSun';
   });
+   isDarkMode = false; 
+ngOnInit(): void {
+  const savedTheme = localStorage.getItem('theme');
+  this.isDarkMode = savedTheme === 'dark';
+  this.applyTheme();
+}
 
- 
+toggleTheme(): void {
+  this.isDarkMode = !this.isDarkMode;
+  localStorage.setItem('theme', this.isDarkMode ? 'dark' : 'light');
+  this.applyTheme();
+}
+
+private applyTheme(): void {
+  const body = document.body;
+  const navbar = document.querySelector('.navbar');
+
+  if (this.isDarkMode) {
+    body.classList.add('dark-mode');
+    body.classList.remove('light-mode');
+    if (navbar) {
+      navbar.classList.add('dark-mode');
+      navbar.classList.remove('light-mode');
+    }
+  } else {
+    body.classList.add('light-mode');
+    body.classList.remove('dark-mode');
+    if (navbar) {
+      navbar.classList.add('light-mode');
+      navbar.classList.remove('dark-mode');
+    }
+  }
+}
+
+
   
 }
