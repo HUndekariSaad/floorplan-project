@@ -26,9 +26,14 @@
                     <a class="nav-link" routerLink="/services" routerLinkActive="active">Services</a>
                 </li>
             </ul>
-            <button (click)="toggleTheme()" class="btn btn-sm btn-outline-secondary">
-                {{ isDarkMode ? '🌙 Dark' : '☀️ Light' }}
+            <button (click)="toggleTheme()" class="btn btn-sm d-flex align-items-center px-3 py-2"
+                [ngClass]="isDarkMode ? 'btn-dark text-light' : 'btn-light text-dark'"
+                style="border-radius: 50px; border: 1px solid #ccc; transition: all 0.3s ease;">
+
+                <span class="me-2" [innerHTML]="isDarkMode ? '🌙' : '☀️'"></span>
+                <span>{{ isDarkMode ? 'Dark Mode' : 'Light Mode' }}</span>
             </button>
+
 
             <!-- dark-mode-toggle.component.html -->
             <!-- <div class="d-flex align-items-center gap-2">

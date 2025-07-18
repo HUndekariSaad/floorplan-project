@@ -9,7 +9,7 @@
       </p>
     </div>
 
-  <div class="row g-4 shadow p-4 rounded contact-card">
+    <div class="row g-4 shadow p-4 rounded contact-card">
       <!-- Left Contact Info -->
       <div class="col-md-5 bg-dark text-white p-4 rounded-3 shadow">
         <h5 class="fw-bold">Contact Information</h5>
@@ -60,7 +60,7 @@
 
             <div class="col-12">
               <label class="form-label fw-bold">Select Service</label>
-              <div class="row row-cols-2 row-cols-md-3 g-2">
+              <div class="row row-cols-2 row-cols-md-4 g-2">
                 <div class="form-check col" *ngFor="let service of servicesList">
                   <input class="form-check-input" type="checkbox" [value]="service" (change)="onCheckboxChange($event)"
                     [id]="service" />
@@ -70,6 +70,7 @@
                 </div>
               </div>
             </div>
+
 
             <div class="col-12">
               <textarea formControlName="message" class="form-control" rows="4"

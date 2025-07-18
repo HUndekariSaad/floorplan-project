@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { FormArray, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import Swal from 'sweetalert2';
 import { ApiService } from '../../../services/api.service';
@@ -8,19 +8,21 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact-us',
-  imports: [RouterModule, ReactiveFormsModule, CommonModule],
+  imports: [RouterModule, ReactiveFormsModule, CommonModule,FormsModule],
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.scss'
 })
 export class ContactUsComponent {
   contactForm: FormGroup;
   servicesList: string[] = [
-    'Epoxy Flooring',
-    'PU Coating',
-    'Self-leveling Screed',
-    'Tile Protection',
-    'All Wall Coatings',
-    'Under Water Coating'
+    'Epoxy Flooring and Coating',
+    'Epoxy Coving & Pencil coving',
+    'Polyurethane Flooring',
+    'Polyurethane Coating',
+    'Car Parking Flooring',
+    'Anti Corrosion Coatings',
+    'Anti Fungal wall Paints',
+    'Under Water tank Coatings'
   ];
 
 
