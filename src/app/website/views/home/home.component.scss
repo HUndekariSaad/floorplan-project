@@ -140,3 +140,120 @@ footer a:hover {
 .clients-wrapper {
   animation: scrollClients 40s linear infinite;
 }
+/* Floating Button */
+.floating-download-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 55px;
+  height: 55px;
+  background-color: #FF7052;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1050;
+  font-size: 22px;
+  transition: background-color 0.3s ease;
+}
+.floating-download-btn:hover {
+  background-color: #e85d40;
+}
+
+/* Modal Overlay */
+.brochure-modal {
+  display: none;
+  position: fixed;
+  z-index: 1060;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Content Box */
+.brochure-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 30px 40px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  text-align: center;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Icon Circle */
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #FF7052;
+  color: white;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+/* Form Row */
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.form-row input {
+  padding: 10px;
+  width: 150px;
+  border: 1px dotted #ccc;
+  border-radius: 5px;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #FF7052;
+  border: none;
+  padding: 10px 30px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background-color: #e85d40;
+}
+
+.brochure-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.brochure-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 700px;
+  width: 90%;
+}

@@ -8,7 +8,7 @@ import { ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
-  imports: [ CommonModule,RouterModule,ContainerComponent, HeaderTogglerDirective, SidebarToggleDirective, IconDirective, HeaderNavComponent, NavItemComponent, NavLinkDirective, RouterLink, RouterLinkActive, NgTemplateOutlet, BreadcrumbRouterComponent, DropdownComponent, DropdownToggleDirective, AvatarComponent, DropdownMenuDirective, DropdownHeaderDirective, DropdownItemDirective, BadgeComponent, DropdownDividerDirective],
+  imports: [ CommonModule,RouterModule, RouterLink, RouterLinkActive ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

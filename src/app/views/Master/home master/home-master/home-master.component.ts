@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { HomeDrawerComponent } from '../home-drawer/home-drawer.component';
 import { ApiService } from '../../../../services/api.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home-master',
-  imports: [HomeDrawerComponent],
+  imports: [HomeDrawerComponent,CommonModule],
   templateUrl: './home-master.component.html',
   styleUrl: './home-master.component.scss'
 })

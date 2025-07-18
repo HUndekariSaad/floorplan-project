@@ -33,12 +33,14 @@
 </section>
 
 <section class="clients-section">
-  <h2 class="client-title ">Our Esteemed Indian Clients</h2>
-  
-  <!-- <div class="text-center mt-3">
-    <button class="btn btn-primary" onclick="showMoreClients('indianClients')">View All</button>
+  <h2 class="client-title ">Our Indian Clients</h2>
+
+  <div class="text-end mt-3">
+    <a href="javascript:void(0)" class="view-more-link" (click)="toggleMoreClients()">
+      {{ showMore ? 'View Less' : 'View More' }}
+    </a>
+
   </div>
-   -->
   <div class="clients-grid">
     <!-- Client Card -->
     <div class="client-card">
@@ -94,10 +96,122 @@
       <p><i class="fa fa-map-marker-alt"></i> Sanand</p>
     </div>
   </div>
+
+  <div class="clients-grid" id="moreClients" *ngIf="showMore">
+    <!-- Client Card -->
+    <div class="client-card">
+      <img src="assets/images/Our Indian Client/image 96.png" alt="Forms + Surface" />
+      <p><strong>Forms + Surface</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Nigeria</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Indian Client/image 97.png" alt="Kirloskar" />
+      <p><strong>Kirloskar</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Pune</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Indian Client/image 98.png" alt="Thiese" />
+      <p><strong>Thiese</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Gujrat</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Indian Client/image 99.png" alt="Zenith Engineering" />
+      <p><strong>Zenith Engineering</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Nigeria</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Indian Client/image 100.png" alt="Galaxy Surfactants" />
+      <p><strong>Galaxy Surfactants</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Tarapur–Boisar</p>
+    </div>
+
+    <!-- Add more client cards below -->
+    <div class="client-card">
+      <img src="assets/images/Our Indian Client/image 101.png" alt="Tek Components" />
+      <p><strong>Gopaldas Visram </strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Goa</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Indian Client/image 102.png" alt="Creative Plastic" />
+      <p><strong>Kripa Labequi</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Gujrat</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Indian Client/image 103.png" alt="Meyer Organics" />
+      <p><strong>Isera Biological</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Pune</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Indian Client/image 104.png" alt="Ranbaxy" />
+      <p><strong>Indo Allied Protien</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Chakan</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Indian Client/image 105.png" alt="Piramal" />
+      <p><strong>Medibios</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Boisar</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Indian Client/image 106.png" alt="Piramal" />
+      <p><strong>Hindustan Lab Ltd.</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Palghar, MH</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Indian Client/image 107.png" alt="Piramal" />
+      <p><strong>Pharcos Specialty </strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Unit II</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Indian Client/image 108.png" alt="Piramal" />
+      <p><strong>Thiese</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Palghar , Mh</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Indian Client/image 109.png" alt="Piramal" />
+      <p><strong>Bisleri</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Andheri – Mumbai</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Indian Client/image 110.png" alt="Piramal" />
+      <p><strong>D’lecta</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Khopol</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Indian Client/image 111.png" alt="Piramal" />
+      <p><strong>Vista Food</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Taloja</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Indian Client/image 112.png" alt="Piramal" />
+      <p><strong>Mahalaxmi Mahila </strong></p>
+      <p><i class="fa fa-map-marker-alt"></i> Sanand</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Indian Client/image 113.png" alt="Piramal" />
+      <p><strong>Patanjali</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i> Chakan</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Indian Client/image 114.png" alt="Piramal" />
+      <p><strong>Gulbrandsen</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i> Gujarat</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Indian Client/image 46.png" alt="Piramal" />
+      <p><strong>Creative Plastic</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i> Daman</p>
+    </div>
+  </div>
 </section>
 
 <section class="clients-section">
-  <h2 class="client-title">Our Most Valuable International Clients</h2>
+  <h2 class="client-title">Our International Clients</h2>
+  <div class="text-end mt-3">
+    <a href="javascript:void(0)" class="view-more-link" (click)="toggleMoreInternatinalClients()">
+      {{ showMoreIndian ? 'View Less' : 'View More' }}
+    </a>
+
+  </div>
   <div class="clients-grid">
     <!-- Client Card -->
     <div class="client-card">
@@ -152,6 +266,99 @@
       <p><strong>Mechnikov</strong></p>
       <p><i class="fa fa-map-marker-alt"></i>America</p>
     </div>
+
+  </div>
+  <div class="clients-grid" id="moreClients" *ngIf="showMoreIndian">
+    <!-- Client Card -->
+
+    <div class="client-card">
+      <img src="assets/images/Our Client/image 115.png" alt="Tata Nano" />
+      <p><strong>Bash Pharma</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>North Sudan</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Client/image 116.png" alt="Ranbaxy" />
+      <p><strong>B.SARL Biorem</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Algeri</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Client/image 66.png" alt="Mechnikov" />
+      <p><strong>Stides Shasum</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Cameroon</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Client/image 117.png" alt="Ranbaxy" />
+      <p><strong>National veterinary</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Ethiopia</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Client/image 118.png" alt="Volkswagen" />
+      <p><strong>LMP Laboratories</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Tunisia</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Client/image 119.png" alt="Reliance L S" />
+      <p><strong>National veterinary</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Ethiopia</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Client/image 120.png" alt="New Holland" />
+      <p><strong>LMP Laboratories </strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Tunisia</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Client/image 121.png" alt="New Holland" />
+      <p><strong>Isera Biological</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Bangladesh</p>
+    </div>
+
+    <!-- Add more client cards below -->
+    <div class="client-card">
+      <img src="assets/images/Our Client/image 122.png" alt="Tek Components" />
+      <p><strong>Aura Pharma </strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>DR Congo Africa</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Client/image 123.png" alt="Creative Plastic" />
+      <p><strong>Navesta</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Srilanka</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Client/image 124.png" alt="Meyer Organics" />
+      <p><strong>Letap</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Ghana</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Client/image 125.png" alt="Ranbaxy" />
+      <p><strong>Norbrook</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Kenya</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Client/image 126.png" alt="Piramal" />
+      <p><strong>SPMC Pharma Pvt</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Srilanka</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Client/image 127.png" alt="Piramal" />
+      <p><strong>Purlab</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Algeria</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Client/image 128.png" alt="Piramal" />
+      <p><strong>Rosas</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Algeria</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Client/image 129.png" alt="Piramal" />
+      <p><strong>Global</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Iraq</p>
+    </div>
+    <div class="client-card">
+      <img src="assets/images/Our Client/image 130.png" alt="Piramal" />
+      <p><strong>Chris Ejik</strong></p>
+      <p><i class="fa fa-map-marker-alt"></i>Nigeria</p>
+    </div>
+
   </div>
 </section>
 
@@ -167,6 +374,11 @@
         Epoxy Flooring Contractor | Epoxy Coating Services | Clean Room Epoxy Flooring | Epoxy Coving Contractor |
         Pencil Coving Services | Polyurethane Flooring Contractor | PU Coating Services | Car Parking Flooring
         Solutions |
+        Anti-Corrosion Coating Contractor | Anti-Fungal Wall Paints for Clean Rooms |
+        Industrial Epoxy Flooring | Hygienic Flooring for Clean Rooms &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        Epoxy Flooring Contractor | Epoxy Coating Services | Clean Room Epoxy Flooring | Epoxy Coving Contractor |
+        Pencil Coving Services | Polyurethane Flooring Contractor | PU Coating Services | Car Parking Flooring Solutions
+        |
         Anti-Corrosion Coating Contractor | Anti-Fungal Wall Paints for Clean Rooms |
         Industrial Epoxy Flooring | Hygienic Flooring for Clean Rooms
       </div>

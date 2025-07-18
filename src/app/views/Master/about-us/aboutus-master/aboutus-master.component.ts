@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { AboutusDrawerComponent } from '../aboutus-drawer/aboutus-drawer.component';
 import { ApiService } from '../../../../services/api.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-aboutus-master',
-  imports: [AboutusDrawerComponent],
+  imports: [AboutusDrawerComponent,CommonModule],
   templateUrl: './aboutus-master.component.html',
   styleUrl: './aboutus-master.component.scss'
 })

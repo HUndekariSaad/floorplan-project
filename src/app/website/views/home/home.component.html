@@ -451,6 +451,52 @@
         </div>
     </div>
 </section>
+<!-- Floating Download Button -->
+<!-- <a href="javascript:void(0);" class="floating-download-btn" title="Download Brochure" onclick="openBrochurePopup()">
+    <i class="bi bi-download"></i>
+</a> -->
+<a href="javascript:void(0);" class="floating-download-btn" title="Download Brochure" (click)="openBrochurePopup()">
+    <i class="bi bi-download"></i>
+</a>
+
+<div class="brochure-modal" *ngIf="isVisible" (click)="onOverlayClick($event)">
+    <div class="brochure-content">
+        <span class="close-btn" (click)="closePopup()">&times;</span>
+        <div class="text-center">
+            <div class="icon-circle">
+                <i class="bi bi-download"></i>
+            </div>
+            <h3>Download Our Brochure</h3>
+            <p class="text-muted">Enter your details to get instant access</p>
+            <form (ngSubmit)="submitForm()" class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="name" class="form-label fw-bold">Name</label>
+                        <input type="text" [(ngModel)]="name" name="name" id="name" class="form-control"
+                            placeholder="Enter your name" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="email" class="form-label fw-bold">Email</label>
+                        <input type="email" [(ngModel)]="email" name="email" id="email" class="form-control"
+                            placeholder="Enter your email" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="phone" class="form-label fw-bold">Phone</label>
+                        <input type="tel" [(ngModel)]="phone" name="phone" id="phone" class="form-control"
+                            placeholder="Enter your phone number" required>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+</div>
+
+
 
 
 <!-- Trusted Brands -->
@@ -534,7 +580,8 @@
         <p class="mb-1 fw-semibold">ISO 9001:2015</p>
         <p class="text-muted small">Trusted partner in high-performance concrete solutions.</p>
 
-        <a href="https://maaruticoncrete.com" style="color: #FF7052;" target="_blank" class="btn btn-outline-danger rounded-pill px-4 mt-2">
+        <a href="https://maaruticoncrete.com" style="color: #FF7052;" target="_blank"
+            class="btn btn-outline-danger rounded-pill px-4 mt-2">
             Visit Website →
         </a>
     </div>
@@ -544,7 +591,7 @@
 <section class="py-5 text-center">
     <div class="container">
         <h4 class="fw-bold mb-3">Get Quote</h4>
-        <a  style="color: #FF7052;" href="/contact-us" class="btn btn-outline-danger rounded-pill px-4">
+        <a style="color: #FF7052;" href="/contact-us" class="btn btn-outline-danger rounded-pill px-4">
             Get a Free Quote →
         </a>
     </div>

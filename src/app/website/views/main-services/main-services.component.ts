@@ -1,9 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component, Renderer2 } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-main-services',
-  imports: [RouterModule],
+  imports: [RouterModule,CommonModule],
   templateUrl: './main-services.component.html',
   styleUrl: './main-services.component.scss'
 })
@@ -34,5 +35,35 @@ export class MainServicesComponent {
       button.style.display = 'none';
     }
   }
+  showMore = false;
+toggleMoreClients(): void {
+  this.showMore = !this.showMore;
+
+  if (this.showMore) {
+    setTimeout(() => {
+      const element = document.getElementById('moreClients');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100); // Delay allows Angular to finish rendering
+  }
+}
+showMoreIndian:boolean=false;
+toggleMoreInternatinalClients(): void {
+  this.showMoreIndian = !this.showMoreIndian;
+
+  if (this.showMoreIndian) {
+    setTimeout(() => {
+      const element = document.getElementById('moreClients');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100); // Delay allows Angular to finish rendering
+  }
+}
+
 
 }
+
+
+

@@ -2,7 +2,7 @@
 
 // import { CommonModule, NgStyle } from '@angular/common';
 // import { IconDirective } from '@coreui/icons-angular';
-// import { ContainerComponent, RowComponent, ColComponent, CardGroupComponent, TextColorDirective, CardComponent, CardBodyComponent, FormDirective, InputGroupComponent, InputGroupTextDirective, FormControlDirective, ButtonDirective } from '@coreui/angular';
+// import { ContainerComponent, RowComponent, ColComponent, CardGroupComponent, TextColorDirective, CardComponent, CardBodyComponent, InputGroupComponent, InputGroupTextDirective, FormControlDirective, ButtonDirective } from '@coreui/angular';
 // import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 // import { HttpClient } from '@angular/common/http';
 // import { switchAll } from 'rxjs';
@@ -78,7 +78,6 @@ import {
   TextColorDirective,
   CardComponent,
   CardBodyComponent,
-  FormDirective,
   InputGroupComponent,
   InputGroupTextDirective,
   FormControlDirective,
@@ -91,7 +90,7 @@ import {
   imports: [
     ReactiveFormsModule,
     ContainerComponent, RowComponent, ColComponent, CardGroupComponent, TextColorDirective,
-    CardComponent, CardBodyComponent, FormDirective, InputGroupComponent,
+    CardComponent, CardBodyComponent, InputGroupComponent,
     InputGroupTextDirective, IconDirective, FormControlDirective, ButtonDirective, NgStyle
   ],
   templateUrl: './login.component.html',
