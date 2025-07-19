@@ -3,7 +3,7 @@
     <div class="col-12 col-md-8">
       <h5 class="fw-bold">{{ formTitle }}</h5>
     </div>
-    <div class="col-12 col-md-4 d-flex justify-content-md-end mt-2 mt-md-0">
+    <!-- <div class="col-12 col-md-4 d-flex justify-content-md-end mt-2 mt-md-0">
       <form class="d-flex align-items-center flex-wrap">
         <div>
           <button type="button" class="btn btn-primary" (click)="add()">
@@ -11,7 +11,7 @@
           </button>
         </div>
       </form>
-    </div>
+    </div> -->
   </div>
 
   <!-- <h4 class="mb-3">Home Master List</h4> -->
@@ -24,7 +24,7 @@
         <th>Phone</th>
         <th>Selected Services</th>
         <th>Message</th>
-        <th>Actions</th>
+        <!-- <th>Actions</th> -->
       </tr>
     </thead>
     <tbody>
@@ -35,11 +35,11 @@
         <td>{{ contact.phoneNumber }}</td>
         <td>{{ contact.service }}</td>
         <td>{{ contact.message }}</td>
-        <td>
+        <!-- <td>
           <button class="btn btn-danger btn-sm" (click)="deleteContact(contact.id)">
             <i class="bi bi-trash"></i> Delete
           </button>
-        </td>
+        </td> -->
       </tr>
     </tbody>
   </table>

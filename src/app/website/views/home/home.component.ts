@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, Renderer2 } from '@angular/core';
 import { AfterViewInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 declare var bootstrap: any;
 @Component({
   selector: 'app-home',
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule,RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

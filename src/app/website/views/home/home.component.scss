@@ -118,9 +118,9 @@ footer a:hover {
   padding-left: 17px;
 }
 
-.gallery-card:hover .overlay-text {
-  opacity: 0;
-}
+// .gallery-card:hover .overlay-text {
+//   opacity: 0;
+// }
 
 .client-card img {
   height: 106px;
@@ -257,3 +257,45 @@ footer a:hover {
   max-width: 700px;
   width: 90%;
 }
+
+  .btn-custom-arrow {
+    background-color: #FF7052;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+  }
+
+  .btn-custom-arrow:hover {
+    background-color: #e85d40;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-image: none;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    position: relative;
+  }
+
+  .carousel-control-prev-icon::after,
+  .carousel-control-next-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+
+  .carousel-control-next-icon::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }

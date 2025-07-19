@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
   styleUrl: './contactus-master.component.scss'
 })
 export class ContactusMasterComponent {
-  formTitle = "Home Master"
+  formTitle = "Contact Us Master"
   apiKey: string = 'api/ContactUs';
   contactList: any = [];
   http: any;
