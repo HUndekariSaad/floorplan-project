@@ -461,159 +461,7 @@
     <i class="bi bi-download"></i>
 </a>
 <!-- Trusted Brands -->
-  <div class="container">
-    <h3 class="fw-bold" style="color: #FF7052; font-family: 'Montserrat', sans-serif; font-size: 40px;">
-      Our Clients Speak
-    </h3>
-    <p style="font-family: 'Montserrat', serif; font-size: 18px; font-weight: 500;" class="text-muted mb-5">
-      Real stories from real customers who trusted us with their floors.
-    </p>
 
-    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-      <div class="carousel-inner">
-
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <div class="row align-items-center">
-            <!-- Left Arrow -->
-            <div class="col-auto d-none d-md-block">
-              <button class="btn btn-custom-arrow" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-            </div>
-
-            <!-- Cards -->
-            <div class="col">
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="p-3 rounded shadow-sm h-100">
-                    <p class="mb-3">The vinyl flooring they installed in our living room looks stunning...</p>
-                    <div class="d-flex align-items-center">
-                      <img src="assets/images/profile.png" class="rounded-circle me-3" width="40" alt="Ravi">
-                      <div><strong>Ravi Sharma</strong><br><small class="text-muted">New Delhi</small></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="p-3 rounded shadow-sm h-100">
-                    <p class="mb-3">I’m so happy with the wooden flooring in my bedroom. The quality is top-notch...</p>
-                    <div class="d-flex align-items-center">
-                      <img src="assets/images/profile.png" class="rounded-circle me-3" width="40" alt="Pooja">
-                      <div><strong>Pooja Mehta</strong><br><small class="text-muted">Mumbai</small></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="p-3 rounded shadow-sm h-100">
-                    <p class="mb-3">Excellent craftsmanship and attention to detail. My office space looks elegant...</p>
-                    <div class="d-flex align-items-center">
-                      <img src="assets/images/profile.png" class="rounded-circle me-3" width="40" alt="Siddharth">
-                      <div><strong>Siddharth Menon</strong><br><small class="text-muted">Kochi</small></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right Arrow -->
-            <div class="col-auto d-none d-md-block">
-              <button class="btn btn-custom-arrow" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-<div class="brochure-modal" *ngIf="isVisible" (click)="onOverlayClick($event)">
-    <div class="brochure-content">
-        <span class="close-btn" (click)="closePopup()">&times;</span>
-        <div class="text-center">
-            <div class="icon-circle">
-                <i class="bi bi-download"></i>
-            </div>
-            <h3>Download Our Brochure</h3>
-            <p class="text-muted">Enter your details to get instant access</p>
-            <form (ngSubmit)="submitForm()" class="container">
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <label for="name" class="form-label fw-bold">Name</label>
-                        <input type="text" [(ngModel)]="name" name="name" id="name" class="form-control"
-                            placeholder="Enter your name" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="email" class="form-label fw-bold">Email</label>
-                        <input type="email" [(ngModel)]="email" name="email" id="email" class="form-control"
-                            placeholder="Enter your email" required>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="phone" class="form-label fw-bold">Phone</label>
-                        <input type="tel" [(ngModel)]="phone" name="phone" id="phone" class="form-control"
-                            placeholder="Enter your phone number" required>
-                    </div>
-                </div>
-                <div class="text-center mt-3">
-                    <button type="submit" class="btn btn-primary submit-btn">Submit</button>
-                </div>
-            </form>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-          <div class="row align-items-center">
-            <!-- Left Arrow -->
-            <div class="col-auto d-none d-md-block">
-              <button class="btn btn-custom-arrow" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-            </div>
-
-            <!-- Cards -->
-            <div class="col">
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="p-3 rounded shadow-sm h-100">
-                    <p class="mb-3">From the first call to installation, the process was smooth and stress-free...</p>
-                    <div class="d-flex align-items-center">
-                      <img src="assets/images/profile.png" class="rounded-circle me-3" width="40" alt="Simran">
-                      <div><strong>Simran Kaur</strong><br><small class="text-muted">Chandigarh</small></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="p-3 rounded shadow-sm h-100">
-                    <p class="mb-3">We chose laminate flooring for our studio, and it came out better than expected...</p>
-                    <div class="d-flex align-items-center">
-                      <img src="assets/images/profile.png" class="rounded-circle me-3" width="40" alt="Neha">
-                      <div><strong>Neha Verma</strong><br><small class="text-muted">Bangalore</small></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="p-3 rounded shadow-sm h-100">
-                    <p class="mb-3">Amazing service and quick installation. Totally satisfied with the vinyl finish...</p>
-                    <div class="d-flex align-items-center">
-                      <img src="assets/images/profile.png" class="rounded-circle me-3" width="40" alt="Arjun">
-                      <div><strong>Arjun Rao</strong><br><small class="text-muted">Hyderabad</small></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right Arrow -->
-            <div class="col-auto d-none d-md-block">
-              <button class="btn btn-custom-arrow" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- Testimonials Section -->
 <section class="py-5 text-center">
@@ -751,7 +599,7 @@
         <p class="mb-1 fw-semibold">ISO 9001:2015</p>
         <p class="text-muted small">Trusted partner in high-performance concrete solutions.</p>
 
-        <a href="https://maaruticoncrete.com" style="color: #FF7052;" target="_blank"
+        <a  routerLink="/contact" style="color: #FF7052;"
             class="btn btn-outline-danger rounded-pill px-4 mt-2">
             Visit Website →
         </a>
@@ -762,7 +610,7 @@
 <section class="py-5 text-center">
     <div class="container">
         <h4 class="fw-bold mb-3">Get Quote</h4>
-        <a style="color: #FF7052;" href="/contact-us" class="btn btn-outline-danger rounded-pill px-4">
+        <a style="color: #FF7052;" routerLink="/contact" class="btn btn-outline-danger rounded-pill px-4">
             Get a Free Quote →
         </a>
     </div>
