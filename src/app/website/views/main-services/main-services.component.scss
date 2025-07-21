@@ -2,9 +2,42 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  /* space between images */
-  justify-content: space-between;
+  justify-content: center;
 }
+
+.service-item {
+  flex: 1 1 calc(25% - 20px); /* 4 per row on large screens */
+  max-width: calc(25% - 20px);
+}
+
+.service-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .service-item {
+    flex: 1 1 calc(33.33% - 20px); /* 3 per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .service-item {
+    flex: 1 1 calc(50% - 20px); /* 2 per row on mobiles */
+  }
+}
+
+@media (max-width: 480px) {
+  .service-item {
+    flex: 1 1 100%; /* 1 per row on small screens */
+    max-width: 100%;
+  }
+}
+
 .horizontal-ticker-container {
   position: relative;
   width: 100%;
@@ -28,6 +61,21 @@
   font-weight: bold;
   font-size: 16px;
   padding-right: 50px; /* 👈 spacing between duplicate lines */
+}
+.ticker-content {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .ticker-content {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ticker-content {
+    font-size: 12px;
+  }
 }
 
 /* actual animation */
@@ -75,17 +123,18 @@
 }
 .clients-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 logos per row */
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 20px;
-  justify-items: center; /* Centers the content inside each grid item */
+  justify-items: center;
   padding: 20px 0;
 }
 
 
 /* Client card */
 .client-card {
-  width: 189px;
-  height: 189px;
+  width: 100%;
+  max-width: 189px;
+  height: auto;
   border: 1px solid #eee;
   padding: 10px;
   box-sizing: border-box;
@@ -97,13 +146,14 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Image inside card */
 .client-card img {
+  width: auto;
   max-height: 80px;
   max-width: 100%;
   object-fit: contain;
   margin-bottom: 10px;
 }
+
 .view-more-link {
   color: #f15a29;
   text-decoration: underline;
@@ -115,7 +165,34 @@
 .view-more-link:hover {
   color: #f15a29;
 }
+.client-card:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
 
 .text-end {
   text-align: right;
+}
+.client-card p {
+  font-size: 14px;
+  margin: 2px 0;
+  word-break: break-word;
+}
+
+/* Responsive font size for titles */
+.client-title,
+.capacity-title {
+  font-size: 1.8rem;
+}
+
+@media (max-width: 576px) {
+  .client-title,
+  .capacity-title {
+    font-size: 1.4rem;
+  }
+
+  .client-card p {
+    font-size: 12px;
+  }
 }

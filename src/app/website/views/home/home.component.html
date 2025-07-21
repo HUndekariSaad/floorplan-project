@@ -215,27 +215,27 @@
 
 <!-- OUR TEAM Section -->
 <section class="py-5" style="font-family: 'Montserrat', sans-serif;">
-    <div class="container">
-        <div class="row mb-4 align-items-center">
-            <div class="col-md-6 d-flex justify-content-center">
-                <img src="assets/images/Bento 1.png" alt="Team" class="img-fluid rounded"
-                    style="width: 299.92px; height: 332px; object-fit: cover; margin-left: 275px; margin-top: 46px;">
-            </div>
-            <div class="col-md-6">
-                <h3 class=" fw-bold" style="font-size: 40px; color: #FF7052;">Our Team</h3>
-                <p style="font-size: 18px; font-weight: 500;">
-                    We take pride in our skilled and experienced workforce. With a dedicated team of 30+ trained
-                    technicians and staff, we ensure precision, speed, and quality in every project.
-                </p>
-                <p style="font-size: 18px; font-weight: 500;">
-                    Our manpower is flexible — we can scale up quickly based on your project's size and urgency.
-                    Whether it's a large industrial flooring job or a high-spec commercial site, our team is ready to
-                    deliver.
-                </p>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row mb-4 align-items-center">
+      <!-- Image Column -->
+      <div class="col-md-6 d-flex justify-content-center mb-4 mb-md-0">
+        <img src="assets/images/Bento 1.png" alt="Team" class="img-fluid rounded team-img">
+      </div>
+
+      <!-- Text Column -->
+      <div class="col-md-6">
+        <h3 class="fw-bold" style="font-size: 40px; color: #FF7052;">Our Team</h3>
+        <p style="font-size: 18px; font-weight: 500;">
+          We take pride in our skilled and experienced workforce. With a dedicated team of 30+ trained technicians and staff, we ensure precision, speed, and quality in every project.
+        </p>
+        <p style="font-size: 18px; font-weight: 500;">
+          Our manpower is flexible — we can scale up quickly based on your project's size and urgency. Whether it's a large industrial flooring job or a high-spec commercial site, our team is ready to deliver.
+        </p>
+      </div>
     </div>
+  </div>
 </section>
+
 
 <!-- Include Montserrat Font -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
@@ -454,73 +454,131 @@
 
 
 <!-- Trusted Brands -->
-<section class="py-5 text-center">
-    <div class="container">
-        <h3 class="fw-bold" style="color: #FF7052; font-family: 'Montserrat', sans-serif; font-size: 40px;">
-            Our Clients Speak
-        </h3>
-        <p style="font-family: 'Montserrat', serif; font-size: 18px; font-weight: 500;" class="text-muted mb-5">
-            Real stories from real customers who trusted us with their floors.
-        </p>
+  <div class="container">
+    <h3 class="fw-bold" style="color: #FF7052; font-family: 'Montserrat', sans-serif; font-size: 40px;">
+      Our Clients Speak
+    </h3>
+    <p style="font-family: 'Montserrat', serif; font-size: 18px; font-weight: 500;" class="text-muted mb-5">
+      Real stories from real customers who trusted us with their floors.
+    </p>
 
-        <!-- Testimonials Grid -->
-        <div class="row g-4 justify-content-center">
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-inner">
 
-            <div class="col-md-4 col-sm-6">
-                <div class="p-3  rounded shadow-sm h-100">
-                    <p class="mb-3">The vinyl flooring they installed in our living room looks stunning. The team was
-                        professional and finished the work ahead of schedule!</p>
-                    <div class="d-flex align-items-center">
-                        <img src="assets/images/profile.png " class="rounded-circle me-3" width="40" alt="Ravi">
-                        <div>
-                            <strong>Ravi Sharma</strong><br><small class="text-muted">New Delhi</small>
-                        </div>
-                    </div>
-                </div>
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row align-items-center">
+            <!-- Left Arrow -->
+            <div class="col-auto d-none d-md-block">
+              <button class="btn btn-custom-arrow" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
             </div>
 
-            <div class="col-md-4 col-sm-6">
-                <div class="p-3  rounded shadow-sm h-100">
-                    <p class="mb-3">I’m so happy with the wooden flooring in my bedroom. The quality is top-notch and
-                        the installers were polite and efficient.</p>
+            <!-- Cards -->
+            <div class="col">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="p-3 rounded shadow-sm h-100">
+                    <p class="mb-3">The vinyl flooring they installed in our living room looks stunning...</p>
                     <div class="d-flex align-items-center">
-                        <img src="assets/images/profile.png " class="rounded-circle me-3" width="40" alt="Pooja">
-                        <div>
-                            <strong>Pooja Mehta</strong><br><small class="text-muted">Mumbai</small>
-                        </div>
+                      <img src="assets/images/profile.png" class="rounded-circle me-3" width="40" alt="Ravi">
+                      <div><strong>Ravi Sharma</strong><br><small class="text-muted">New Delhi</small></div>
                     </div>
+                  </div>
                 </div>
+                <div class="col-md-4">
+                  <div class="p-3 rounded shadow-sm h-100">
+                    <p class="mb-3">I’m so happy with the wooden flooring in my bedroom. The quality is top-notch...</p>
+                    <div class="d-flex align-items-center">
+                      <img src="assets/images/profile.png" class="rounded-circle me-3" width="40" alt="Pooja">
+                      <div><strong>Pooja Mehta</strong><br><small class="text-muted">Mumbai</small></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="p-3 rounded shadow-sm h-100">
+                    <p class="mb-3">Excellent craftsmanship and attention to detail. My office space looks elegant...</p>
+                    <div class="d-flex align-items-center">
+                      <img src="assets/images/profile.png" class="rounded-circle me-3" width="40" alt="Siddharth">
+                      <div><strong>Siddharth Menon</strong><br><small class="text-muted">Kochi</small></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
-                <div class="p-3  rounded shadow-sm h-100">
-                    <p class="mb-3">Excellent craftsmanship and attention to detail. My office space looks so elegant
-                        now. Highly recommended.</p>
-                    <div class="d-flex align-items-center">
-                        <img src="assets/images/profile.png " class="rounded-circle me-3" width="40" alt="Siddharth">
-                        <div>
-                            <strong>Siddharth Menon</strong><br><small class="text-muted">Kochi</small>
-                        </div>
-                    </div>
-                </div>
+            <!-- Right Arrow -->
+            <div class="col-auto d-none d-md-block">
+              <button class="btn btn-custom-arrow" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-
-            <div class="col-md-4 col-sm-6">
-                <div class="p-3  rounded shadow-sm h-100">
-                    <p class="mb-3">From the first call to installation, the process was smooth and stress-free. The
-                        laminate flooring was exactly what I wanted.</p>
-                    <div class="d-flex align-items-center">
-                        <img src="assets/images/profile.png " class="rounded-circle me-3" width="40" alt="Simran">
-                        <div>
-                            <strong>Simran Kaur</strong><br><small class="text-muted">Chandigarh</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+          </div>
         </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row align-items-center">
+            <!-- Left Arrow -->
+            <div class="col-auto d-none d-md-block">
+              <button class="btn btn-custom-arrow" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+            </div>
+
+            <!-- Cards -->
+            <div class="col">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="p-3 rounded shadow-sm h-100">
+                    <p class="mb-3">From the first call to installation, the process was smooth and stress-free...</p>
+                    <div class="d-flex align-items-center">
+                      <img src="assets/images/profile.png" class="rounded-circle me-3" width="40" alt="Simran">
+                      <div><strong>Simran Kaur</strong><br><small class="text-muted">Chandigarh</small></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="p-3 rounded shadow-sm h-100">
+                    <p class="mb-3">We chose laminate flooring for our studio, and it came out better than expected...</p>
+                    <div class="d-flex align-items-center">
+                      <img src="assets/images/profile.png" class="rounded-circle me-3" width="40" alt="Neha">
+                      <div><strong>Neha Verma</strong><br><small class="text-muted">Bangalore</small></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="p-3 rounded shadow-sm h-100">
+                    <p class="mb-3">Amazing service and quick installation. Totally satisfied with the vinyl finish...</p>
+                    <div class="d-flex align-items-center">
+                      <img src="assets/images/profile.png" class="rounded-circle me-3" width="40" alt="Arjun">
+                      <div><strong>Arjun Rao</strong><br><small class="text-muted">Hyderabad</small></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Arrow -->
+            <div class="col-auto d-none d-md-block">
+              <button class="btn btn-custom-arrow" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-</section>
+  </div>
+
+
+
 
 
 

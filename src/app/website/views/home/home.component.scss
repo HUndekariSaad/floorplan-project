@@ -4,7 +4,7 @@
 
 .gallery-img {
   width: 207px;
-  height: 239px;
+  height: auto;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -27,7 +27,7 @@ footer a:hover {
 
 .capacity-images {
   width: 403px;
-  height: 446px;
+  height: auto;
   object-fit: cover;
   border-radius: 12px;
 }
@@ -225,6 +225,26 @@ footer a:hover {
   border: 1px dotted #ccc;
   border-radius: 5px;
 }
+@media (max-width: 576px) {
+  .form-row input {
+    width: 100%;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .clients-wrapper {
+    gap: 30px;
+    animation: scrollClients 20s linear infinite;
+  }
+
+  .client-card img {
+    height: 60px;
+    max-width: 100%;
+  }
+}
 
 /* Submit Button */
 .submit-btn {
@@ -274,6 +294,22 @@ footer a:hover {
     background-color: #e85d40;
   }
 
+  .btn-custom-arrow {
+    background-color: #FF7052;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+  }
+
+  .btn-custom-arrow:hover {
+    background-color: #e85d40;
+  }
+
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
     background-image: none;
@@ -299,3 +335,68 @@ footer a:hover {
   .carousel-control-next-icon::after {
     transform: translate(-50%, -50%) rotate(-45deg);
   }
+
+  @media (max-width: 576px) {
+  .floating-download-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+.services-gallery {
+  justify-content: center;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  padding: 60px 15px;
+}
+
+@media (max-width: 768px) {
+  h1, h2, h3, h4 {
+    font-size: 90%;
+  }
+
+  p {
+    font-size: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-caption {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .carousel-caption form {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .carousel-caption form .col-auto {
+    width: 100%;
+  }
+
+  .carousel-caption input,
+  .carousel-caption button {
+    width: 100%;
+  }
+}
+.team-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (min-width: 992px) {
+  .team-img {
+    width: 300px;
+    height: 332px;
+  }
+}

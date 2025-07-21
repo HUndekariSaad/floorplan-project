@@ -2,7 +2,35 @@ footer {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
 }
-footer.bg-dark {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+
+footer h6 {
+  font-size: 18px;
+}
+
+footer ul li {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+footer iframe {
+  border-radius: 8px;
+}
+
+@media (max-width: 576px) {
+  footer {
+    text-align: center;
+  }
+
+  footer .d-flex {
+    flex-direction: column !important;
+    gap: 10px;
+  }
+
+  footer ul {
+    padding-left: 0;
+  }
+
+  footer iframe {
+    height: 200px;
+  }
 }

@@ -280,3 +280,97 @@
     color: #f15a29;
      text-align: center;
 }
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .section-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section-image img {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .capacity-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    width: 80%;
+    max-width: 330px;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-banner {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .overlay-content h1 {
+    font-size: 36px;
+  }
+
+  .overlay-content p {
+    font-size: 14px;
+  }
+
+  .capacity-section {
+    padding: 40px 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .capacity-cards {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .clients-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .overlay-content h1 {
+    font-size: 28px;
+  }
+
+  .section-text h2 {
+    font-size: 24px;
+  }
+
+  .section-text p,
+  .section-text ul {
+    font-size: 14px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-container {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .overlay-content {
+    padding: 30px 20px;
+  }
+
+  .overlay-content h1 {
+    font-size: 24px;
+  }
+
+  .overlay-content p {
+    font-size: 13px;
+  }
+}
